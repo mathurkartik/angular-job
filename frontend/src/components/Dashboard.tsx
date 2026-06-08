@@ -18,8 +18,8 @@ export function Dashboard({ activeCategory }: DashboardProps) {
       setLoading(true);
       setError(null);
       try {
-        // Try static JSON first (GitHub Pages), fall back to live API (local Docker)
-        let response = await fetch(`${import.meta.env.BASE_URL}jobs.json`);
+        // Try static JSON first (Vercel), fall back to live API (local Docker)
+        let response = await fetch('/jobs.json');
         if (!response.ok) {
           response = await fetch('/api/v1/jobs?limit=100');
         }
