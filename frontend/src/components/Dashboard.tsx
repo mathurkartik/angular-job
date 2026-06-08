@@ -18,7 +18,11 @@ export function Dashboard({ activeCategory }: DashboardProps) {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch('/api/v1/jobs?limit=100');
+        // Try static JSON first (GitHub Pages), fall back to live API (local Docker)
+        let response = await fetch(`${import.meta.env.BASE_URL}jobs.json`);
+        if (!response.ok) {
+          response = await fetch('/api/v1/jobs?limit=100');
+        }
         if (!response.ok) throw new Error("Failed to fetch jobs");
         const data = await response.json();
         setJobs(data);
