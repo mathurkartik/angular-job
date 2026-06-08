@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Sidebar } from './components/Sidebar'
-import { ScraperControl } from './components/ScraperControl'
 import { Dashboard } from './components/Dashboard'
 
 function App() {
@@ -17,11 +16,10 @@ function App() {
         <header style={{ marginBottom: '2rem' }}>
           <h1 className="text-gradient">AngularHunt Command Center</h1>
           <p className="text-secondary" style={{ marginTop: '0.5rem' }}>
-            Monitor and manage automated job scraping tasks across tier 1, big tech, and global remote boards.
+            Monitor automated job scraping tasks across tier 1, big tech, and global remote boards.
           </p>
         </header>
         
-        <ScraperControl />
         <Dashboard activeCategory={activeCategory} />
       </main>
     </div>
@@ -29,3 +27,4 @@ function App() {
 }
 
 export default App
+
