@@ -30,10 +30,11 @@ jobs:
       - name: 🎭 Install Playwright Browsers & OS Dependencies
         run: playwright install chromium --with-deps
 
-      - name: 🚀 Execute 4-Agent AI Pipeline
+      - name: 🚀 Execute 2-Agent AI Pipeline
         run: python main.py
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
 
       - name: 💾 Upload Raw Artifacts (CSV + JSON)
         uses: actions/upload-artifact@v4
