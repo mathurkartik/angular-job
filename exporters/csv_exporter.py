@@ -1,11 +1,11 @@
 import csv
 from typing import List
 from pathlib import Path
-from schemas.job_listing import ScoredJobListing
+from schemas.job_listing import ExportedJobListing
 
 class CSVExporter:
     @staticmethod
-    def export(jobs: List[ScoredJobListing], filepath: str = "output/jobs.csv"):
+    def export(jobs: List[ExportedJobListing], filepath: str = "output/jobs.csv"):
         Path(filepath).parent.mkdir(parents=True, exist_ok=True)
         
         if not jobs:
@@ -13,7 +13,7 @@ class CSVExporter:
             
         headers = [
             "Rank", "Category", "Tier", "Company", "Job Title", 
-            "Location", "Total Score", "Justification", "Application URL"
+            "Location", "Application URL"
         ]
         
         with open(filepath, mode="w", newline="", encoding="utf-8") as f:
@@ -28,7 +28,5 @@ class CSVExporter:
                     job.company_name,
                     job.job_title,
                     job.location,
-                    f"{job.total_score:.2f}",
-                    job.justification,
                     job.application_url
                 ])

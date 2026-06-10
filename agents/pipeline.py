@@ -9,7 +9,7 @@ Flow:
 from typing import List, Dict, Any
 from schemas.job_listing import (
     RawJobListing, ReviewedJobListing, FilteredJobListing,
-    ScoredJobListing, CompanyCategory
+    ExportedJobListing, CompanyCategory
 )
 from agents.extractor_agent import ExtractorAgent
 from agents.extraction_reviewer import ExtractionReviewerAgent
@@ -31,10 +31,10 @@ class AgentPipeline:
         raw_text: str,
         company: Dict[str, Any],
         category: CompanyCategory,
-    ) -> List[ScoredJobListing]:
+    ) -> List[ExportedJobListing]:
         """
-        Run the full 5-agent pipeline on a single company's career page text.
-        Returns a list of fully scored, reviewed, and validated job listings.
+        Run the full 2-agent pipeline on a single company's career page text.
+        Returns a list of reviewed and validated job listings.
         """
         company_name = company["name"]
         base_url = company["url"]
@@ -98,21 +98,14 @@ class AgentPipeline:
         if not filtered_listings:
             return []
 
-        # ── Bypass Agents 3 & 4 (Scoring Disabled by User) ──
-        scored_listings: List[ScoredJobListing] = []
+        # ── Export ──
+        exported_listings: List[ExportedJobListing] = []
         for listing in filtered_listings:
-            scored = ScoredJobListing(
-                **listing.model_dump(),
-                total_score=1.0,
-                pillar_scores={"core_stack": 1.0, "modern_angular": 1.0, "state_management": 1.0, "testing_quality": 1.0, "scale_enterprise": 1.0},
-                matched_keywords={},
-                justification="AI Scoring Disabled. Raw extracted job.",
-                score_reviewed=False,
-                score_adjusted=False,
-                score_reviewer_notes=""
+            exported = ExportedJobListing(
+                **listing.model_dump()
             )
-            scored_listings.append(scored)
+            exported_listings.append(exported)
 
-        logger.info(f"[Pipeline] {len(scored_listings)} jobs processed for {company_name}")
-        return scored_listings
+        logger.info(f"[Pipeline] {len(exported_listings)} jobs processed for {company_name}")
+        return exported_listings
 

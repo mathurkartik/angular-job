@@ -1,13 +1,13 @@
 from typing import List
 from rich.table import Table
 from rich.console import Console
-from schemas.job_listing import ScoredJobListing
+from schemas.job_listing import ExportedJobListing
 
 console = Console()
 
 class ConsoleReporter:
     @staticmethod
-    def report(jobs: List[ScoredJobListing]):
+    def report(jobs: List[ExportedJobListing]):
         if not jobs:
             console.print("[bold yellow]No jobs passed the pipeline.[/bold yellow]")
             return
@@ -17,8 +17,7 @@ class ConsoleReporter:
         table.add_column("Category", width=12)
         table.add_column("Company", style="bold cyan")
         table.add_column("Title", width=30)
-        table.add_column("Score", justify="right", style="green")
-        table.add_column("Justification", width=40)
+        table.add_column("Location", width=20)
         
         # Only show top 20 on console to prevent spam
         for job in jobs[:20]:
@@ -27,8 +26,7 @@ class ConsoleReporter:
                 job.category.value,
                 job.company_name,
                 job.job_title[:30] + ("..." if len(job.job_title)>30 else ""),
-                f"{job.total_score:.2f}",
-                job.justification
+                job.location[:20] + ("..." if len(job.location)>20 else "")
             )
             
         console.print(table)

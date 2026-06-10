@@ -61,44 +61,6 @@ Raw Page Text:
             logger.error(f"Groq Extraction Failed: {str(e)}")
             return []
 
-    def score_job_description(self, job_title: str, description: str) -> Optional[Dict[str, Any]]:
-        """
-        Asks Groq to semantically evaluate if this is truly an Angular role.
-        """
-        if not self.client:
-            return None
-            
-        prompt = f"""
-Evaluate the following job description for a Senior Angular / Frontend engineering role.
-I need to know if this is a strong match for someone specializing in Angular (v2+), RxJS, and TypeScript.
-A perfect score (1.0) means it is a dedicated Senior Angular role.
-A low score (0.0 - 0.3) means they are migrating away from Angular, it's mainly a React/Vue role, or it's a backend role.
 
-Job Title: {job_title}
-Description: {description}
-
-Return ONLY a valid JSON object. Do not include markdown.
-Keys required:
-- "total_score": A float between 0.0 and 1.0
-- "justification": A 1-2 sentence explanation of why you gave this score based on the context.
-- "is_angular_primary": Boolean indicating if Angular is the main frontend framework.
-"""
-        try:
-            chat_completion = self.client.chat.completions.create(
-                messages=[
-                    {
-                        "role": "user",
-                        "content": prompt,
-                    }
-                ],
-                model=self.model,
-                response_format={"type": "json_object"},
-            )
-            
-            return json.loads(chat_completion.choices[0].message.content)
-            
-        except Exception as e:
-            logger.error(f"Groq Scoring Failed: {str(e)}")
-            return None
 
 groq_client = GroqClient()

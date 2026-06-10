@@ -29,14 +29,6 @@ class FilteredJobListing(ReviewedJobListing):
     """A listing that passed its category-specific filter pipeline."""
     passed_gates: List[str] = Field(default_factory=list)
 
-class ScoredJobListing(FilteredJobListing):
-    """A listing with semantic scoring applied."""
-    total_score: float                     # 0.0 – 1.0
-    pillar_scores: Dict[str, float]        # Per-pillar breakdown
-    matched_keywords: Dict[str, List[str]] # Keywords hit per pillar
-    justification: str                     # "Why It Matches" summary
+class ExportedJobListing(FilteredJobListing):
+    """Final listing format exported to JSON/CSV."""
     rank: Optional[int] = None             # Priority rank within its category
-    # Agent 4 (Score Reviewer) fields
-    score_reviewed: bool = False
-    score_adjusted: bool = False
-    score_reviewer_notes: str = ""
