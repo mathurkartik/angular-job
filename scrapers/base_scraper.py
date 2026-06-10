@@ -94,3 +94,43 @@ class BaseScraper:
         Should extract job details from the page and return a list of RawJobListings.
         """
         raise NotImplementedError("Subclasses must implement `extract_jobs`.")
+
+    async def get_page_text(self, company: Dict[str, Any]) -> Optional[str]:
+        """
+        Navigates to the company's career page and extracts the raw innerText.
+        Used by the 5-agent pipeline (main.py calls this instead of scrape()).
+        """
+        url = company["url"]
+        logger.info(f"Loading page text from [{company['name']}] at {url}...")
+
+        await pacing_manager.apply_delay(url)
+
+        try:
+            await self.init_browser()
+
+            response = await self.page.goto(url, wait_until="networkidle", timeout=45000)
+
+            if response and response.status in [403, 429]:
+                logger.warning(f"Access blocked (Status {response.status}) for {company['name']}")
+                pacing_manager.record_failure(url)
+                return None
+
+            pacing_manager.record_success(url)
+
+            # Scroll to trigger lazy loading
+            await self.page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            await self.page.wait_for_timeout(2000)
+
+            # Extract the clean visible text
+            text = await self.page.evaluate("document.body.innerText")
+            logger.info(f"Extracted {len(text)} chars of text from {company['name']}")
+            return text
+
+        except Exception as e:
+            logger.error(f"Failed to load page text for {company['name']}: {str(e)}")
+            pacing_manager.record_failure(url)
+            return None
+
+        finally:
+            await self.close_browser()
+

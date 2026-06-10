@@ -20,9 +20,14 @@ class RawJobListing(BaseModel):
     date_posted: Optional[str] = None
     scraped_at: datetime = Field(default_factory=datetime.now)
 
-class FilteredJobListing(RawJobListing):
+class ReviewedJobListing(RawJobListing):
+    """A listing that has been reviewed by the Extraction Reviewer (Agent 2)."""
+    extraction_verified: bool = True       # Agent 2 confirmed this is real
+    reviewer_notes: str = ""               # Agent 2's notes (e.g., "URL corrected")
+
+class FilteredJobListing(ReviewedJobListing):
     """A listing that passed its category-specific filter pipeline."""
-    passed_gates: List[str]                # Which gates it cleared
+    passed_gates: List[str] = Field(default_factory=list)
 
 class ScoredJobListing(FilteredJobListing):
     """A listing with semantic scoring applied."""
@@ -31,3 +36,10 @@ class ScoredJobListing(FilteredJobListing):
     matched_keywords: Dict[str, List[str]] # Keywords hit per pillar
     justification: str                     # "Why It Matches" summary
     rank: Optional[int] = None             # Priority rank within its category
+    # Agent 4 (Score Reviewer) fields
+    score_reviewed: bool = False
+    score_adjusted: bool = False
+    score_reviewer_notes: str = ""
+    # Agent 5 (Gemini Final Validator) fields
+    gemini_verdict: str = "PENDING"        # APPROVED, FLAGGED, or PENDING
+    gemini_notes: str = ""
