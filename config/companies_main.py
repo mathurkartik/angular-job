@@ -35,13 +35,13 @@ COMPANIES = [
     {"name": "Nextracker",     "tier": "Tier_2_Big_Tech",          "url": "https://nextracker.wd5.myworkdayjobs.com/en-US/nextpower_careers?q=Engineer", "portal_type": "workday"},
 
     # --- Tier 3: Premium Consultancies ---
-    {"name": "Thoughtworks",   "tier": "Tier_3_Premium_Consulting", "url": "https://www.thoughtworks.com/careers/jobs/",  "portal_type": "greenhouse"},
+    {"name": "Thoughtworks",   "tier": "Tier_3_Premium_Consulting", "url": "https://www.thoughtworks.com/careers/jobs/",  "portal_type": "generic"},
     {"name": "Deloitte",       "tier": "Tier_3_Premium_Consulting", "url": "https://southasiacareers.deloitte.com/search/?q=Engineer",      "portal_type": "generic"},
     {"name": "PwC",            "tier": "Tier_3_Premium_Consulting", "url": "https://jobs.pwc.com/global/en/search-results?keywords=Engineer",                       "portal_type": "generic"},
     {"name": "Publicis Sapient","tier": "Tier_3_Premium_Consulting","url": "https://careers.publicissapient.com/job-search","portal_type": "generic"},
 
     # --- Tier 4: FinTech & Product GCCs ---
-    {"name": "JPMorgan Chase", "tier": "Tier_4_FinTech_GCC",       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1002/", "portal_type": "workday"},
+    {"name": "JPMorgan Chase", "tier": "Tier_4_FinTech_GCC",       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1002/", "portal_type": "generic"},
     {"name": "Goldman Sachs",  "tier": "Tier_4_FinTech_GCC",       "url": "https://www.goldmansachs.com/careers/",       "portal_type": "generic"},
     {"name": "Visa",           "tier": "Tier_4_FinTech_GCC",       "url": "https://visa.wd5.myworkdayjobs.com/en-US/Visa/", "portal_type": "workday"},
     {"name": "S&P Global",     "tier": "Tier_4_FinTech_GCC",       "url": "https://careers.spglobal.com/jobs/",          "portal_type": "generic"},
@@ -52,12 +52,12 @@ COMPANIES = [
     {"name": "Wellfound",      "tier": "Tier_5_Global_Remote",     "url": "https://wellfound.com/jobs",                  "portal_type": "remote_board"},
 
     # --- Tier 6: Global Talent Networks ---
-    {"name": "Uplers",         "tier": "Tier_6_Talent_Network",    "url": "https://www.uplers.com/join-as-a-talent/",    "portal_type": "talent_network"},
+    {"name": "Uplers",         "tier": "Tier_6_Talent_Network",    "url": "https://www.uplers.com/join-as-a-talent/",    "portal_type": "generic"},
     {"name": "Turing",         "tier": "Tier_6_Talent_Network",    "url": "https://www.turing.com/jobs",                 "portal_type": "talent_network"},
     {"name": "Toptal",         "tier": "Tier_6_Talent_Network",    "url": "https://www.toptal.com/careers",              "portal_type": "talent_network"},
-    {"name": "Andela",         "tier": "Tier_6_Talent_Network",    "url": "https://andela.com/talent/",                  "portal_type": "talent_network"},
+    {"name": "Andela",         "tier": "Tier_6_Talent_Network",    "url": "https://andela.com/talent/",                  "portal_type": "generic"},
     {"name": "BairesDev",      "tier": "Tier_6_Talent_Network",    "url": "https://jobs.bairesdev.com/",                 "portal_type": "talent_network"},
-    {"name": "Optimum",        "tier": "Tier_6_Talent_Network",    "url": "https://www.optimum.io/careers/",             "portal_type": "talent_network"},
+    {"name": "Optimum",        "tier": "Tier_6_Talent_Network",    "url": "https://www.optimum.io/careers/",             "portal_type": "generic"},
 
     # --- New User-Provided Additions (Hubs & Remote) ---
     {"name": "Siemens",        "tier": "Tier_1_Global_GCC",      "url": "https://jobs.siemens.com/",                   "portal_type": "generic"},
@@ -88,7 +88,7 @@ COMPANIES = [
     {"name": "Barclays", "tier": "Tier_1_Global_GCC", "url": "https://search.jobs.barclays/search-jobs/Angular/India", "portal_type": "phenom"},
     {"name": "Fidelity Investments", "tier": "Tier_1_Global_GCC", "url": "https://jobs.fidelity.com/in/jobs/?search=Angular", "portal_type": "phenom"},
     {"name": "Broadridge", "tier": "Tier_1_Global_GCC", "url": "https://broadridge.wd5.myworkdayjobs.com/en-US/Careers?q=Angular", "portal_type": "workday"},
-    {"name": "SS&C Technologies", "tier": "Tier_1_Global_GCC", "url": "https://wd1.myworkdaysite.com/en-US/recruiting/ssctech/SSCTechnologies?q=Angular", "portal_type": "workday"},
+    {"name": "SS&C Technologies", "tier": "Tier_1_Global_GCC", "url": "https://wd1.myworkdaysite.com/en-US/recruiting/ssctech/SSCTechnologies?q=Angular", "portal_type": "generic"},
     {"name": "Standard Chartered", "tier": "Tier_1_Global_GCC", "url": "https://jobs.standardchartered.com/search-jobs?k=Angular&l=India", "portal_type": "phenom"},
     {"name": "MetLife", "tier": "Tier_1_Global_GCC", "url": "https://jobs.metlife.com/search-jobs/Angular/India", "portal_type": "generic"},
     {"name": "FedEx ACC India", "tier": "Tier_1_Global_GCC", "url": "https://careers.fedex.com/jobs?search=Angular&location=Hyderabad", "portal_type": "phenom"},
@@ -104,5 +104,5 @@ COMPANIES = [
     {"name": "Envoy Global", "tier": "Tier_2_Big_Tech", "url": "https://boards.greenhouse.io/envoyglobalinc?q=Angular&location=India", "portal_type": "greenhouse"},
     {"name": "NiCE", "tier": "Tier_2_Big_Tech", "url": "https://boards.greenhouse.io/nice?q=Angular&location=India", "portal_type": "greenhouse"},
     {"name": "Epic Kids", "tier": "Tier_4_Global_Remote", "url": "https://boards.greenhouse.io/epickids?q=Angular&location=India", "portal_type": "greenhouse"},
-    {"name": "Leadstreams", "tier": "Tier_4_Global_Remote", "url": "https://boards.greenhouse.io/leadstreams?q=Angular&location=India", "portal_type": "greenhouse"},
+    {"name": "Leadstreams", "tier": "Tier_4_Global_Remote", "url": "https://boards.greenhouse.io/leadstreams?q=Angular&location=India", "portal_type": "generic"},
 ]
