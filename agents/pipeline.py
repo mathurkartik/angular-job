@@ -26,7 +26,7 @@ class AgentPipeline:
         self.extractor = ExtractorAgent()
         self.extraction_reviewer = ExtractionReviewerAgent()
 
-    def process_page(
+    async def process_page(
         self,
         raw_text: str,
         company: Dict[str, Any],
@@ -83,7 +83,7 @@ class AgentPipeline:
                 k: v for k, v in listing.model_dump().items()
                 if k in RawJobListing.model_fields
             })
-            filtered = run_pipeline(raw)
+            filtered = await run_pipeline(raw)
             if filtered:
                 # Upgrade to FilteredJobListing with review fields
                 filt = FilteredJobListing(

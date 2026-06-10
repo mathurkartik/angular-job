@@ -40,7 +40,7 @@ async def process_category(companies: List[dict], category: CompanyCategory, hea
                 # Run each raw job through the filter
                 for raw_job in raw_jobs:
                     from filters.pipeline_router import run_pipeline
-                    filtered = run_pipeline(raw_job)
+                    filtered = await run_pipeline(raw_job)
                     if filtered:
                         exported = ExportedJobListing(
                             **filtered.model_dump()
@@ -55,7 +55,7 @@ async def process_category(companies: List[dict], category: CompanyCategory, hea
                     logger.warning(f"No text extracted from {company['name']}. Skipping.")
                     continue
 
-                jobs = pipeline.process_page(raw_text, company, category)
+                jobs = await pipeline.process_page(raw_text, company, category)
                 exported_jobs.extend(jobs)
 
         except Exception as e:
