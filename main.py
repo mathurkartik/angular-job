@@ -1,6 +1,9 @@
 import asyncio
 import argparse
 from typing import List
+from dotenv import load_dotenv
+
+load_dotenv()  # Load API keys from .env file
 
 from schemas.job_listing import CompanyCategory, ScoredJobListing
 from config.companies_main import COMPANIES as MAIN_COMPANIES
@@ -26,17 +29,53 @@ async def process_category(companies: List[dict], category: CompanyCategory, hea
 
     for company in companies:
         try:
-            # Step 1: Use Playwright to load the page and extract raw text
             scraper = get_scraper(company["portal_type"], headless=headless)
-            raw_text = await scraper.get_page_text(company)
+            portal = company["portal_type"]
 
-            if not raw_text:
-                logger.warning(f"No text extracted from {company['name']}. Skipping.")
-                continue
+            if portal in ("greenhouse", "lever", "workday"):
+                # Specialized scrapers have their own extract_jobs() — use them directly
+                logger.info(f"Using specialized {portal} scraper for {company['name']}")
+                raw_jobs = await scraper.scrape(company, category)
 
-            # Step 2: Run the 5-agent pipeline (Extract → Review → Filter → Score → Review Score)
-            jobs = pipeline.process_page(raw_text, company, category)
-            scored_jobs.extend(jobs)
+                # Run each raw job through the filter + AI scoring agents (Agents 3-5)
+                for raw_job in raw_jobs:
+                    from filters.pipeline_router import run_pipeline
+                    filtered = run_pipeline(raw_job)
+                    if filtered:
+                        scorer_result = pipeline.scorer.score(filtered.job_title, filtered.description_text)
+                        if not scorer_result:
+                            continue
+
+                        review_result = pipeline.score_reviewer.review(
+                            filtered.job_title, filtered.description_text, scorer_result
+                        )
+                        final_score = review_result.get("adjusted_total_score", scorer_result.get("total_score", 0.0))
+
+                        if final_score < 0.35:
+                            continue
+
+                        scored = ScoredJobListing(
+                            **filtered.model_dump(),
+                            total_score=final_score,
+                            pillar_scores=scorer_result.get("pillar_scores", {}),
+                            matched_keywords=scorer_result.get("matched_keywords", {}),
+                            justification=f"[AI] {scorer_result.get('justification', 'AI evaluated')}",
+                            score_reviewed=True,
+                            score_adjusted=review_result.get("score_was_adjusted", False),
+                            score_reviewer_notes=review_result.get("adjustment_reason", ""),
+                        )
+                        scored_jobs.append(scored)
+            else:
+                # Generic portals — use the full 5-agent AI pipeline
+                logger.info(f"Using 5-agent AI pipeline for {company['name']}")
+                raw_text = await scraper.get_page_text(company)
+
+                if not raw_text:
+                    logger.warning(f"No text extracted from {company['name']}. Skipping.")
+                    continue
+
+                jobs = pipeline.process_page(raw_text, company, category)
+                scored_jobs.extend(jobs)
 
         except Exception as e:
             logger.error(f"Error processing {company['name']}: {str(e)}")
@@ -95,9 +134,9 @@ async def main():
     flagged = sum(1 for j in all_scored_jobs if j.gemini_verdict == "FLAGGED")
     logger.info(f"\n{'='*50}")
     logger.info(f"FINAL RESULTS: {len(all_scored_jobs)} total jobs")
-    logger.info(f"  ✅ Gemini APPROVED: {approved}")
-    logger.info(f"  ⚠️  Gemini FLAGGED:  {flagged}")
-    logger.info(f"  ⏳ Pending Review:   {len(all_scored_jobs) - approved - flagged}")
+    logger.info(f"  APPROVED by Gemini: {approved}")
+    logger.info(f"  FLAGGED by Gemini:  {flagged}")
+    logger.info(f"  PENDING Review:     {len(all_scored_jobs) - approved - flagged}")
     logger.info(f"{'='*50}")
 
 
