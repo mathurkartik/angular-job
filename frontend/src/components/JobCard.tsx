@@ -1,4 +1,4 @@
-import { ExternalLink, Calendar, MapPin, Star, Building2, CheckCircle2 } from "lucide-react";
+import { ExternalLink, Calendar, MapPin, Building2, CheckCircle2 } from "lucide-react";
 import type { JobListing } from "../types";
 import "./JobCard.css";
 
