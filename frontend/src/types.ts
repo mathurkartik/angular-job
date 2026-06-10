@@ -1,14 +1,14 @@
-export enum CompanyCategory {
-  MAIN = "main",
-  INDIAN_PRODUCT = "indian_product",
-  SERVICE = "service",
-}
+export const CompanyCategory = {
+  MAIN: "main",
+  INDIAN_PRODUCT: "indian_product",
+  SERVICE: "service",
+} as const;
 
 export interface JobListing {
   id: number;
   company_name: string;
   company_tier: string;
-  category: CompanyCategory;
+  category: string;
   job_title: string;
   location: string;
   description_text: string;

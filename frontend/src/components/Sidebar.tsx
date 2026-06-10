@@ -1,4 +1,4 @@
-import { Briefcase, Building, Code2, Cpu, Globe, Rocket, Terminal } from "lucide-react";
+import { Briefcase, Building, Code2, Cpu, Rocket } from "lucide-react";
 import { CompanyCategory } from "../types";
 import "./Sidebar.css";
 
