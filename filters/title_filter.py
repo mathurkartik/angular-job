@@ -19,7 +19,8 @@ class TitleFilter:
         "data", "machine learning", "ml", "ai", "artificial intelligence", 
         "devops", "sre", "cloud", "security", "network", "system", "systems", 
         "database", "infrastructure", "hardware", "firmware", "sales", "hr", 
-        "finance", "support", "it", "administrator"
+        "finance", "support", "it", "administrator", "collection", "collections", 
+        "lending", "credit"
     ]
     
     @staticmethod
