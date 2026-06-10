@@ -13,7 +13,7 @@ class GroqClient:
             logger.warning("GROQ_API_KEY not found in environment. Groq integrations will fail.")
         
         # We use a fast, cheap model for high-volume text parsing
-        self.model = "llama3-8b-8192" 
+        self.model = "llama-3.1-8b-instant" 
         self.client = Groq(api_key=self.api_key) if self.api_key else None
 
     def extract_jobs_from_text(self, text: str, base_url: str) -> List[Dict[str, Any]]:

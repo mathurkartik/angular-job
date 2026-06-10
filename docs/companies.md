@@ -64,32 +64,32 @@ TARGET_COMPANIES = [
     # --- Tier 1: Healthcare & Energy Domain Matches ---
     {
         "name": "GE HealthCare",
-        "tier": "Tier_1_Domain_Match",
+        "tier": "Tier_1_Global_GCC",
         "url": "https://careers.gehealthcare.com/global/en/"
     },
     {
         "name": "Philips",
-        "tier": "Tier_1_Domain_Match",
+        "tier": "Tier_1_Global_GCC",
         "url": "https://www.careers.philips.com/global/en/"
     },
     {
         "name": "Novartis",
-        "tier": "Tier_1_Domain_Match",
+        "tier": "Tier_1_Global_GCC",
         "url": "https://www.novartis.com/careers/career-search/"
     },
     {
         "name": "IQVIA",
-        "tier": "Tier_1_Domain_Match",
+        "tier": "Tier_1_Global_GCC",
         "url": "https://jobs.iqvia.com/en/jobs/"
     },
     {
         "name": "Baker Hughes",
-        "tier": "Tier_1_Domain_Match",
+        "tier": "Tier_1_Global_GCC",
         "url": "https://careers.bakerhughes.com/global/en/"
     },
     {
         "name": "SLB",
-        "tier": "Tier_1_Domain_Match",
+        "tier": "Tier_1_Global_GCC",
         "url": "https://apply.slb.com/careers/"
     },
 

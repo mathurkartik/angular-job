@@ -92,11 +92,10 @@ async def main():
     headless = not args.headed
     all_scored_jobs = []
 
-    logger.info("╔════════════════════════════════════════════════════════╗")
-    logger.info("║  Angular Job Engine — 5-Agent AI Pipeline             ║")
-    logger.info("║  Agents: Extractor → Reviewer → Scorer → Reviewer    ║")
-    logger.info("║  Final Gate: Gemini Validator                         ║")
-    logger.info("╚════════════════════════════════════════════════════════╝")
+    logger.info("==========================================================")
+    logger.info("|  Angular Job Engine - 4-Agent AI Pipeline              |")
+    logger.info("|  Agents: Extractor -> Reviewer -> Scorer -> Reviewer   |")
+    logger.info("==========================================================")
 
     if args.category in ["all", "main"]:
         logger.info("\n=== Processing Category 1: Main Companies ===")
@@ -113,9 +112,6 @@ async def main():
         jobs = await process_category(SERVICE_COMPANIES, CompanyCategory.SERVICE, headless)
         all_scored_jobs.extend(jobs)
 
-    # ── Agent 5: Gemini Final Validation (runs once on the entire batch) ──
-    logger.info("\n=== Running Gemini Final Validation ===")
-    all_scored_jobs = pipeline.final_review(all_scored_jobs)
 
     # ── Rank and Export ──
     logger.info("\nRanking and Exporting Results...")

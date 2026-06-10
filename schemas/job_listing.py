@@ -11,7 +11,7 @@ class CompanyCategory(str, Enum):
 class RawJobListing(BaseModel):
     """Raw data extracted directly from a career page."""
     company_name: str
-    company_tier: str                      # e.g., "Tier_1_Domain_Match"
+    company_tier: str                      # e.g., "Tier_1_Global_GCC"
     category: CompanyCategory              # Which of the 3 categories
     job_title: str
     location: str
@@ -40,6 +40,3 @@ class ScoredJobListing(FilteredJobListing):
     score_reviewed: bool = False
     score_adjusted: bool = False
     score_reviewer_notes: str = ""
-    # Agent 5 (Gemini Final Validator) fields
-    gemini_verdict: str = "PENDING"        # APPROVED, FLAGGED, or PENDING
-    gemini_notes: str = ""

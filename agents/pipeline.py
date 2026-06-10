@@ -1,10 +1,10 @@
 """
-Pipeline Orchestrator: Chains all 5 agents together.
+Pipeline Orchestrator: Chains all 4 agents together.
 
 Flow:
-  Playwright (raw text) → Agent 1 (Extract) → Agent 2 (Review Extraction)
-  → Filter Pipeline → Agent 3 (Score) → Agent 4 (Review Score)
-  → Agent 5 (Gemini Final Validation) → jobs.json
+  Playwright (raw text) -> Agent 1 (Extract) -> Agent 2 (Review Extraction)
+  -> Filter Pipeline -> Agent 3 (Score) -> Agent 4 (Review Score)
+  -> jobs.json
 """
 from typing import List, Dict, Any
 from schemas.job_listing import (
@@ -15,7 +15,6 @@ from agents.extractor_agent import ExtractorAgent
 from agents.extraction_reviewer import ExtractionReviewerAgent
 from agents.scorer_agent import ScorerAgent
 from agents.score_reviewer import ScoreReviewerAgent
-from agents.final_validator import FinalValidatorAgent
 from filters.pipeline_router import run_pipeline
 from config.scoring_config import MIN_SCORE_THRESHOLD
 from utils.logger import get_logger
@@ -31,7 +30,6 @@ class AgentPipeline:
         self.extraction_reviewer = ExtractionReviewerAgent()
         self.scorer = ScorerAgent()
         self.score_reviewer = ScoreReviewerAgent()
-        self.final_validator = FinalValidatorAgent()
 
     def process_page(
         self,
@@ -47,7 +45,7 @@ class AgentPipeline:
         base_url = company["url"]
         tier = company["tier"]
 
-        logger.info(f"═══ Pipeline Start: {company_name} ═══")
+        logger.info(f"=== Pipeline Start: {company_name} ===")
 
         # ── Agent 1: Extract ──
         logger.info(f"[Agent 1] Extracting jobs from {company_name}...")
@@ -137,7 +135,7 @@ class AgentPipeline:
                 total_score=final_score,
                 pillar_scores=scorer_result.get("pillar_scores", {}),
                 matched_keywords=scorer_result.get("matched_keywords", {}),
-                justification=f"🤖 {scorer_result.get('justification', 'AI evaluated')}",
+                justification=f"{scorer_result.get('justification', 'AI evaluated')}",
                 score_reviewed=True,
                 score_adjusted=review_result.get("score_was_adjusted", False),
                 score_reviewer_notes=review_result.get("adjustment_reason", ""),
@@ -147,25 +145,3 @@ class AgentPipeline:
         logger.info(f"[Pipeline] {len(scored_listings)} jobs scored and reviewed for {company_name}")
         return scored_listings
 
-    def final_review(self, all_jobs: List[ScoredJobListing]) -> List[ScoredJobListing]:
-        """
-        Run Agent 5 (Gemini) on the complete batch.
-        This is called ONCE after all companies have been processed.
-        """
-        if not all_jobs:
-            return all_jobs
-
-        logger.info(f"═══ Agent 5: Gemini Final Validation ({len(all_jobs)} jobs) ═══")
-
-        # Convert to dicts for Gemini processing
-        jobs_as_dicts = [job.model_dump(mode="json") for job in all_jobs]
-
-        # Run Gemini validation
-        validated_dicts = self.final_validator.validate_batch(jobs_as_dicts)
-
-        # Apply Gemini verdicts back to the ScoredJobListing objects
-        for job, validated in zip(all_jobs, validated_dicts):
-            job.gemini_verdict = validated.get("gemini_verdict", "PENDING")
-            job.gemini_notes = validated.get("gemini_notes", "")
-
-        return all_jobs

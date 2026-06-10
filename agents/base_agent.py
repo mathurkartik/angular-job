@@ -14,13 +14,13 @@ logger = get_logger("agent.base")
 class BaseGroqAgent:
     """Abstract base class for all Groq-powered agents."""
 
-    def __init__(self, name: str, model: str = "llama3-8b-8192"):
+    def __init__(self, name: str, model: str = "llama-3.1-8b-instant"):
         self.name = name
         self.model = model
-        api_key = os.getenv("GROQ_API_KEY")
-        if not api_key:
+        self.api_key = os.getenv("GROQ_API_KEY")
+        if not self.api_key:
             logger.warning(f"[{self.name}] GROQ_API_KEY not found. Agent will be disabled.")
-        self.client = Groq(api_key=api_key) if api_key else None
+        self.client = Groq(api_key=self.api_key) if self.api_key else None
 
     def _call_llm(self, system_prompt: str, user_prompt: str) -> Optional[Dict[str, Any]]:
         """Send a structured JSON request to Groq and parse the response."""
