@@ -26,9 +26,9 @@ class Category1Pipeline:
             return None
         passed_gates.append("SENIORITY")
         
-        # 3. Stack Filter
-        if not StackFilter.passes(combined_text):
-            return None
+        # 3. Stack Filter (Bypassed because full JDs are no longer fetched)
+        # if not StackFilter.passes(combined_text):
+        #     return None
         passed_gates.append("STACK")
         
         return FilteredJobListing(

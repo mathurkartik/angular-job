@@ -13,8 +13,8 @@ class Category3Pipeline:
         
         combined_text = f"{job.job_title} {job.description_text}"
         
-        if not StackFilter.passes(combined_text):
-            return None
+        # if not StackFilter.passes(combined_text):
+        #     return None
         passed_gates.append("STACK")
         passed_gates.append("GEO_BYPASSED")
         passed_gates.append("SENIORITY_BYPASSED")

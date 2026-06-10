@@ -23,9 +23,9 @@ class Category2Pipeline:
         if not SeniorityFilter.passes(combined_text, CATEGORY2_SENIORITY_PATTERNS):
             return None
         passed_gates.append("SENIORITY_RELAXED")
-        
-        if not StackFilter.passes(combined_text):
-            return None
+        # 3. Stack Filter (Bypassed)
+        # if not StackFilter.passes(combined_text):
+        #     return None
         passed_gates.append("STACK")
         
         return FilteredJobListing(
