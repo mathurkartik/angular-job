@@ -8,13 +8,20 @@ logger = get_logger("groq_client")
 
 class GroqClient:
     def __init__(self):
-        self.api_key = os.getenv("GROQ_API_KEY")
-        if not self.api_key:
-            logger.warning("GROQ_API_KEY not found in environment. Groq integrations will fail.")
+        # Support either a comma-separated list of keys or a single key
+        keys_env = os.getenv("GROQ_API_KEYS") or os.getenv("GROQ_API_KEY")
+        
+        self.api_keys = []
+        if keys_env:
+            self.api_keys = [k.strip() for k in keys_env.split(",") if k.strip()]
+            
+        if not self.api_keys:
+            logger.warning("No GROQ_API_KEY found in environment. Groq integrations will fail.")
         
         # We use a fast, cheap model for high-volume text parsing
         self.model = "llama-3.1-8b-instant" 
-        self.client = Groq(api_key=self.api_key) if self.api_key else None
+        self.current_key_idx = 0
+        self.client = Groq(api_key=self.api_keys[self.current_key_idx]) if self.api_keys else None
 
     def extract_jobs_from_text(self, text: str, base_url: str) -> List[Dict[str, Any]]:
         """
@@ -40,26 +47,44 @@ Each object in the array must have exactly these keys:
 Raw Page Text:
 {text[:6000]}  # Truncating to avoid context limits if text is absolutely massive
 """
-        try:
-            chat_completion = self.client.chat.completions.create(
-                messages=[
-                    {
-                        "role": "user",
-                        "content": prompt,
-                    }
-                ],
-                model=self.model,
-                response_format={"type": "json_object"},
-            )
-            
-            # Since Groq json_object requires an object (not an array), we should prompt it to return an object with a "jobs" array.
-            # Let's adjust the prompt handling.
-            response_content = chat_completion.choices[0].message.content
-            return json.loads(response_content)
-            
-        except Exception as e:
-            logger.error(f"Groq Extraction Failed: {str(e)}")
-            return []
+        attempts = 0
+        max_attempts = len(self.api_keys) if self.api_keys else 1
+        
+        while attempts < max_attempts:
+            try:
+                chat_completion = self.client.chat.completions.create(
+                    messages=[
+                        {
+                            "role": "user",
+                            "content": prompt,
+                        }
+                    ],
+                    model=self.model,
+                    response_format={"type": "json_object"},
+                )
+                
+                response_content = chat_completion.choices[0].message.content
+                return json.loads(response_content)
+                
+            except Exception as e:
+                error_str = str(e).lower()
+                # Check for rate limit / 429 error
+                if "rate limit" in error_str or "429" in error_str:
+                    attempts += 1
+                    logger.warning(f"Groq Rate Limit hit on key {self.current_key_idx + 1}/{len(self.api_keys)}.")
+                    
+                    if attempts < max_attempts:
+                        self.current_key_idx = (self.current_key_idx + 1) % len(self.api_keys)
+                        logger.info(f"Switching to Groq API Key {self.current_key_idx + 1}...")
+                        self.client = Groq(api_key=self.api_keys[self.current_key_idx])
+                    else:
+                        logger.error("All Groq API keys have hit their rate limits.")
+                        return []
+                else:
+                    logger.error(f"Groq Extraction Failed: {str(e)}")
+                    return []
+        
+        return []
 
 
 
