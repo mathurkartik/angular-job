@@ -42,27 +42,15 @@ async def process_category(companies: List[dict], category: CompanyCategory, hea
                     from filters.pipeline_router import run_pipeline
                     filtered = run_pipeline(raw_job)
                     if filtered:
-                        scorer_result = pipeline.scorer.score(filtered.job_title, filtered.description_text)
-                        if not scorer_result:
-                            continue
-
-                        review_result = pipeline.score_reviewer.review(
-                            filtered.job_title, filtered.description_text, scorer_result
-                        )
-                        final_score = review_result.get("adjusted_total_score", scorer_result.get("total_score", 0.0))
-
-                        if final_score < 0.35:
-                            continue
-
                         scored = ScoredJobListing(
                             **filtered.model_dump(),
-                            total_score=final_score,
-                            pillar_scores=scorer_result.get("pillar_scores", {}),
-                            matched_keywords=scorer_result.get("matched_keywords", {}),
-                            justification=f"[AI] {scorer_result.get('justification', 'AI evaluated')}",
-                            score_reviewed=True,
-                            score_adjusted=review_result.get("score_was_adjusted", False),
-                            score_reviewer_notes=review_result.get("adjustment_reason", ""),
+                            total_score=1.0,
+                            pillar_scores={"core_stack": 1.0, "modern_angular": 1.0, "state_management": 1.0, "testing_quality": 1.0, "scale_enterprise": 1.0},
+                            matched_keywords={},
+                            justification="AI Scoring Disabled. Raw extracted job.",
+                            score_reviewed=False,
+                            score_adjusted=False,
+                            score_reviewer_notes=""
                         )
                         scored_jobs.append(scored)
             else:
@@ -93,8 +81,8 @@ async def main():
     all_scored_jobs = []
 
     logger.info("==========================================================")
-    logger.info("|  Angular Job Engine - 4-Agent AI Pipeline              |")
-    logger.info("|  Agents: Extractor -> Reviewer -> Scorer -> Reviewer   |")
+    logger.info("|  Angular Job Engine - 2-Agent Pipeline                 |")
+    logger.info("|  Agents: Extractor -> Reviewer (Scoring Disabled)      |")
     logger.info("==========================================================")
 
     if args.category in ["all", "main"]:

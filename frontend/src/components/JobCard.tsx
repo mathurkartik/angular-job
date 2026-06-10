@@ -26,10 +26,12 @@ export function JobCard({ job }: JobCardProps) {
             </div>
           </div>
         </div>
-        <div className="score-badge">
-          <Star size={16} fill="currentColor" />
-          <span>{(job.total_score * 100).toFixed(0)}%</span>
-        </div>
+        {!job.justification.includes("AI Scoring Disabled") && (
+          <div className="score-badge">
+            <Star size={16} fill="currentColor" />
+            <span>{(job.total_score * 100).toFixed(0)}%</span>
+          </div>
+        )}
       </div>
 
       <div className="job-tags">
@@ -56,9 +58,11 @@ export function JobCard({ job }: JobCardProps) {
         )}
       </div>
 
-      <div className="justification-box">
-        <p>{job.justification}</p>
-      </div>
+      {!job.justification.includes("AI Scoring Disabled") && (
+        <div className="justification-box">
+          <p>{job.justification}</p>
+        </div>
+      )}
 
       <div className="job-card-footer">
         <a 
