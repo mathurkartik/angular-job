@@ -8,11 +8,18 @@ class TitleFilter:
     
     # Core engineering keywords that indicate this is a tech role
     TECH_KEYWORDS = [
-        "engineer", "developer", "frontend", "front end", "front-end",
-        "angular", "react", "ui", "ux", "software", "web", "programmer",
-        "architect", "full stack", "fullstack", "full-stack", "backend",
-        "back end", "back-end", "data", "ml", "devops", "qa", "sdet",
-        "systems", "cloud", "technology", "tech lead", "sre"
+        "frontend", "front end", "front-end", "angular", "react", "ui", "ux", 
+        "web", "full stack", "fullstack", "full-stack", "software", "engineer", 
+        "developer", "programmer"
+    ]
+    
+    # Aggressively drop roles that are Tech but NOT Frontend/Angular
+    EXCLUDE_KEYWORDS = [
+        "qa", "sdet", "test", "testing", "backend", "back end", "back-end", 
+        "data", "machine learning", "ml", "ai", "artificial intelligence", 
+        "devops", "sre", "cloud", "security", "network", "system", "systems", 
+        "database", "infrastructure", "hardware", "firmware", "sales", "hr", 
+        "finance", "support", "it", "administrator"
     ]
     
     @staticmethod
@@ -22,7 +29,12 @@ class TitleFilter:
             
         title_lower = title.lower()
         
-        # Check if any tech keyword is in the title
+        # First check if it contains any EXCLUDED keywords
+        for keyword in TitleFilter.EXCLUDE_KEYWORDS:
+            if re.search(r'\b' + re.escape(keyword) + r'\b', title_lower):
+                return False
+
+        # Then check if it contains any INCLUDED tech keywords
         for keyword in TitleFilter.TECH_KEYWORDS:
             if re.search(r'\b' + re.escape(keyword) + r'\b', title_lower):
                 return True
