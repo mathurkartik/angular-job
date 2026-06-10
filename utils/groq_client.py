@@ -68,17 +68,17 @@ Raw Page Text:
                 
             except Exception as e:
                 error_str = str(e).lower()
-                # Check for rate limit / 429 error
-                if "rate limit" in error_str or "429" in error_str:
+                # Check for rate limit / 429 error or invalid API key / 401 error
+                if "rate limit" in error_str or "429" in error_str or "401" in error_str or "invalid" in error_str:
                     attempts += 1
-                    logger.warning(f"Groq Rate Limit hit on key {self.current_key_idx + 1}/{len(self.api_keys)}.")
+                    logger.warning(f"Groq Error (Rate limit/Invalid key) hit on key {self.current_key_idx + 1}/{len(self.api_keys)}.")
                     
                     if attempts < max_attempts:
                         self.current_key_idx = (self.current_key_idx + 1) % len(self.api_keys)
                         logger.info(f"Switching to Groq API Key {self.current_key_idx + 1}...")
                         self.client = Groq(api_key=self.api_keys[self.current_key_idx])
                     else:
-                        logger.error("All Groq API keys have hit their rate limits.")
+                        logger.error("All Groq API keys have hit their rate limits or are invalid.")
                         return []
                 else:
                     logger.error(f"Groq Extraction Failed: {str(e)}")
