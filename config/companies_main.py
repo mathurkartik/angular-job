@@ -12,7 +12,7 @@ COMPANIES = [
     {"name": "Philips",        "tier": "Tier_1_Global_GCC",       "url": "https://www.careers.philips.com/global/en/search-results?keywords=Engineer",  "portal_type": "generic"},
     {"name": "Novartis",       "tier": "Tier_1_Global_GCC",       "url": "https://www.novartis.com/careers/career-search?search_api_fulltext=Software", "portal_type": "generic"},
     {"name": "IQVIA",          "tier": "Tier_1_Global_GCC",       "url": "https://jobs.iqvia.com/en/jobs/?search=Engineer",            "portal_type": "generic"},
-    {"name": "Baker Hughes",   "tier": "Tier_1_Global_GCC",       "url": "https://careers.bakerhughes.com/global/en/search-results?keywords=Engineer", "portal_type": "workday"},
+    {"name": "Baker Hughes",   "tier": "Tier_1_Global_GCC",       "url": "https://careers.bakerhughes.com/global/en/search-results?keywords=Engineer", "portal_type": "generic"},
     {"name": "SLB",            "tier": "Tier_1_Global_GCC",       "url": "https://careers.slb.com/job-search?query=Software",             "portal_type": "generic"},
 
     # --- Tier 2: Big Tech & SaaS ---
