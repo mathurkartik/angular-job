@@ -1,1 +1,66 @@
-[]
+[
+    {
+        "company_name": "Sleepyhead",
+        "company_tier": "Tier_7_Domestic_Unicorn",
+        "category": "indian_product",
+        "job_title": "Senior Angular Developer",
+        "location": "India",
+        "description_text": "We are looking for a skilled Senior Angular Developer to join our team. The ideal candidate will have experience with Angular and be able to lead the development of complex features.",
+        "application_url": "https://careers.sleepyhead.com/jobs/12345",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T15:24:54.755433",
+        "extraction_verified": true,
+        "reviewer_notes": "Review skipped (LLM unavailable)",
+        "passed_gates": [
+            "GEO_RELAXED",
+            "SENIORITY_RELAXED",
+            "STACK"
+        ],
+        "total_score": 1.0,
+        "pillar_scores": {
+            "core_stack": 1.0,
+            "modern_angular": 1.0,
+            "state_management": 1.0,
+            "testing_quality": 1.0,
+            "scale_enterprise": 1.0
+        },
+        "matched_keywords": {},
+        "justification": "AI Scoring Disabled. Raw extracted job.",
+        "rank": 1,
+        "score_reviewed": false,
+        "score_adjusted": false,
+        "score_reviewer_notes": ""
+    },
+    {
+        "company_name": "Sleepyhead",
+        "company_tier": "Tier_7_Domestic_Unicorn",
+        "category": "indian_product",
+        "job_title": "Full Stack Developer (Angular)",
+        "location": "India",
+        "description_text": "We are looking for a skilled Full Stack Developer with experience in Angular to join our team. The ideal candidate will have experience with both frontend and backend development.",
+        "application_url": "https://careers.sleepyhead.com/jobs/34567",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T15:24:54.755473",
+        "extraction_verified": true,
+        "reviewer_notes": "Review skipped (LLM unavailable)",
+        "passed_gates": [
+            "GEO_RELAXED",
+            "SENIORITY_RELAXED",
+            "STACK"
+        ],
+        "total_score": 1.0,
+        "pillar_scores": {
+            "core_stack": 1.0,
+            "modern_angular": 1.0,
+            "state_management": 1.0,
+            "testing_quality": 1.0,
+            "scale_enterprise": 1.0
+        },
+        "matched_keywords": {},
+        "justification": "AI Scoring Disabled. Raw extracted job.",
+        "rank": 2,
+        "score_reviewed": false,
+        "score_adjusted": false,
+        "score_reviewer_notes": ""
+    }
+]
