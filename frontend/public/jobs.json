@@ -1,1 +1,344 @@
-[]
+[
+    {
+        "company_name": "Degreed",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Staff UI Engineer | Bengaluru, IN",
+        "location": "bengaluru, karnataka, india | hybrid",
+        "description_text": "Staff UI Engineer | Bengaluru, IN",
+        "application_url": "https://job-boards.greenhouse.io/degreed/jobs/5837050004",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:14:09.351884",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 1
+    },
+    {
+        "company_name": "TRG Screen",
+        "company_tier": "Tier_4_FinTech_GCC",
+        "category": "main",
+        "job_title": "Lead Developer (Full Stack)",
+        "location": "bengaluru, karnataka, india",
+        "description_text": "Lead Developer (Full Stack)",
+        "application_url": "https://job-boards.eu.greenhouse.io/trgscreen/jobs/4880954101",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:15:06.541287",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 2
+    },
+    {
+        "company_name": "TRG Screen",
+        "company_tier": "Tier_4_FinTech_GCC",
+        "category": "main",
+        "job_title": "Lead Software Engineer- .Net Full Stack",
+        "location": "bengaluru, karnataka, india",
+        "description_text": "Lead Software Engineer- .Net Full Stack",
+        "application_url": "https://job-boards.eu.greenhouse.io/trgscreen/jobs/4783761101",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:15:06.541393",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 3
+    },
+    {
+        "company_name": "TRG Screen",
+        "company_tier": "Tier_4_FinTech_GCC",
+        "category": "main",
+        "job_title": "Senior Software Engineer- Full Stack (Java + Angular) - 2",
+        "location": "bengaluru, karnataka, india",
+        "description_text": "Senior Software Engineer- Full Stack (Java + Angular) - 2",
+        "application_url": "https://job-boards.eu.greenhouse.io/trgscreen/jobs/4829851101",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:15:06.541707",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 4
+    },
+    {
+        "company_name": "TRG Screen",
+        "company_tier": "Tier_4_FinTech_GCC",
+        "category": "main",
+        "job_title": "Senior Software Engineer (Java)",
+        "location": "bengaluru, karnataka, india",
+        "description_text": "Senior Software Engineer (Java)",
+        "application_url": "https://job-boards.eu.greenhouse.io/trgscreen/jobs/4751920101",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:15:06.541807",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 5
+    },
+    {
+        "company_name": "Global Healthcare Exchange",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Principal Software EngineerNew",
+        "location": "office location or remote - usa",
+        "description_text": "Principal Software EngineerNew",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4697776005",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:19:23.996986",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 6
+    },
+    {
+        "company_name": "Global Healthcare Exchange",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Senior Software Engineer",
+        "location": "hyderabad, telangana, india",
+        "description_text": "Senior Software Engineer",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4698283005",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:19:23.997417",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 7
+    },
+    {
+        "company_name": "Global Healthcare Exchange",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Software Engineer II- Full Stack, Angular, Java, AWS",
+        "location": "office location or remote - usa",
+        "description_text": "Software Engineer II- Full Stack, Angular, Java, AWS",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4700778005",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:19:23.997614",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 8
+    },
+    {
+        "company_name": "Global Healthcare Exchange",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Software Engineer III",
+        "location": "hyderabad, telangana, india",
+        "description_text": "Software Engineer III",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4698303005",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:19:23.997708",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 9
+    },
+    {
+        "company_name": "Global Healthcare Exchange",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Software Engineer III - 1553",
+        "location": "hyderabad, telangana, india",
+        "description_text": "Software Engineer III - 1553",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4679969005",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:19:23.997802",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 10
+    },
+    {
+        "company_name": "Global Healthcare Exchange",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Software Engineer III - Full Stack, Angular, Java, AWS New",
+        "location": "office location or remote - usa",
+        "description_text": "Software Engineer III - Full Stack, Angular, Java, AWS New",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4700819005",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:19:23.998014",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 11
+    },
+    {
+        "company_name": "Global Healthcare Exchange",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Staff Software Engineer",
+        "location": "hyderabad, telangana, india",
+        "description_text": "Staff Software Engineer",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4668826005",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:19:23.998121",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 12
+    },
+    {
+        "company_name": "OneTrust",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Staff Software Engineer- Frontend",
+        "location": "bengaluru, india",
+        "description_text": "Staff Software Engineer- Frontend",
+        "application_url": "https://job-boards.greenhouse.io/onetrust/jobs/7749618",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:19:28.138596",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 13
+    },
+    {
+        "company_name": "Envoy Global",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Lead Software Engineer [.Net]",
+        "location": "hyderabad, telangana, india",
+        "description_text": "Lead Software Engineer [.Net]",
+        "application_url": "https://job-boards.greenhouse.io/envoyglobalinc/jobs/5996082004",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:19:32.619687",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 14
+    },
+    {
+        "company_name": "Envoy Global",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Senior Software Engineer (UI)",
+        "location": "hyderabad, telangana, india",
+        "description_text": "Senior Software Engineer (UI)",
+        "application_url": "https://job-boards.greenhouse.io/envoyglobalinc/jobs/5843157004",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:19:32.619798",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 15
+    },
+    {
+        "company_name": "Epic Kids",
+        "company_tier": "Tier_4_Global_Remote",
+        "category": "main",
+        "job_title": "Junior Software Engineer, Full-Stack",
+        "location": "remote, us",
+        "description_text": "Junior Software Engineer, Full-Stack",
+        "application_url": "https://job-boards.greenhouse.io/epickids/jobs/7751646003",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:20:20.370507",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 16
+    },
+    {
+        "company_name": "Epic Kids",
+        "company_tier": "Tier_4_Global_Remote",
+        "category": "main",
+        "job_title": "Senior Software Engineer, Full-Stack",
+        "location": "remote, us",
+        "description_text": "Senior Software Engineer, Full-Stack",
+        "application_url": "https://job-boards.greenhouse.io/epickids/jobs/7751592003",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:20:20.370954",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 17
+    },
+    {
+        "company_name": "Epic Kids",
+        "company_tier": "Tier_4_Global_Remote",
+        "category": "main",
+        "job_title": "Senior Software Engineer, Full-Stack \u2014 Content Tools",
+        "location": "bangalore, india (remote within india)",
+        "description_text": "Senior Software Engineer, Full-Stack \u2014 Content Tools",
+        "application_url": "https://job-boards.greenhouse.io/epickids/jobs/7751667003",
+        "date_posted": null,
+        "scraped_at": "2026-06-10T19:20:20.371062",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 18
+    }
+]
