@@ -125,14 +125,8 @@ async def main():
     JSONExporter.export(all_scored_jobs)
     ConsoleReporter.report(all_scored_jobs)
 
-    # Summary
-    approved = sum(1 for j in all_scored_jobs if j.gemini_verdict == "APPROVED")
-    flagged = sum(1 for j in all_scored_jobs if j.gemini_verdict == "FLAGGED")
     logger.info(f"\n{'='*50}")
-    logger.info(f"FINAL RESULTS: {len(all_scored_jobs)} total jobs")
-    logger.info(f"  APPROVED by Gemini: {approved}")
-    logger.info(f"  FLAGGED by Gemini:  {flagged}")
-    logger.info(f"  PENDING Review:     {len(all_scored_jobs) - approved - flagged}")
+    logger.info(f"FINAL RESULTS: {len(all_scored_jobs)} total jobs found")
     logger.info(f"{'='*50}")
 
 
