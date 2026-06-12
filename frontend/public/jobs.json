@@ -1,24 +1,5 @@
 [
     {
-        "company_name": "SLB",
-        "company_tier": "Tier_1_Global_GCC",
-        "category": "main",
-        "job_title": "Angular Developer",
-        "location": "Not specified",
-        "description_text": "We are seeking an Angular Developer to join our team. The successful candidate will be responsible for designing and developing user interfaces and user experiences using Angular.",
-        "application_url": "https://careers.slb.com/job-search",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T06:32:30.025557",
-        "extraction_verified": true,
-        "reviewer_notes": "Removed 0 hallucinated jobs, added 1 missed Angular listing",
-        "passed_gates": [
-            "TITLE",
-            "GEO",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 1
-    },
-    {
         "company_name": "Deloitte",
         "company_tier": "Tier_3_Premium_Consulting",
         "category": "main",
@@ -27,7 +8,7 @@
         "description_text": "Engineering as a Service/ Operate",
         "application_url": "https://southasiacareers.deloitte.com/search/?q=Senior+Associate+%7C+Fullstack+Java+%7C+Bengaluru+%7C+Engineering+as+a+Service%2F+Operate",
         "date_posted": null,
-        "scraped_at": "2026-06-12T06:40:48.965111",
+        "scraped_at": "2026-06-12T11:50:40.300649",
         "extraction_verified": true,
         "reviewer_notes": "Removed 0 hallucinated jobs, added 0 missed Angular listings",
         "passed_gates": [
@@ -35,7 +16,7 @@
             "GEO",
             "CONTENT_ANGULAR"
         ],
-        "rank": 2
+        "rank": 1
     },
     {
         "company_name": "JPMorgan Chase",
@@ -46,7 +27,7 @@
         "description_text": "Design, develop, and deploy Angular-based software applications to meet business requirements.",
         "application_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1002/requisitions/33333",
         "date_posted": null,
-        "scraped_at": "2026-06-12T06:41:51.226774",
+        "scraped_at": "2026-06-12T11:51:48.442174",
         "extraction_verified": true,
         "reviewer_notes": "Removed 1 hallucinated job, added 1 missed Angular listing",
         "passed_gates": [
@@ -54,26 +35,7 @@
             "GEO",
             "CONTENT_ANGULAR"
         ],
-        "rank": 3
-    },
-    {
-        "company_name": "We Work Remotely",
-        "company_tier": "Tier_5_Global_Remote",
-        "category": "main",
-        "job_title": "Senior Angular Developer",
-        "location": "Anywhere in the World",
-        "description_text": "Senior Angular Developer",
-        "application_url": "https://weworkremotely.com/remote-jobs/senior-angular-developer-at-ahu-technologies",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T06:43:25.594560",
-        "extraction_verified": true,
-        "reviewer_notes": "Removed 0 hallucinated jobs, added 1 missed Angular listing",
-        "passed_gates": [
-            "TITLE",
-            "GEO",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 4
+        "rank": 2
     },
     {
         "company_name": "Toptal",
@@ -81,10 +43,10 @@
         "category": "main",
         "job_title": "Angular Developers",
         "location": "Not specified",
-        "description_text": "Design, develop, and deploy Angular applications for our clients.",
+        "description_text": "Developers",
         "application_url": "https://www.toptal.com/careers",
         "date_posted": null,
-        "scraped_at": "2026-06-12T06:45:33.887740",
+        "scraped_at": "2026-06-12T11:55:22.709098",
         "extraction_verified": true,
         "reviewer_notes": "No changes",
         "passed_gates": [
@@ -92,7 +54,7 @@
             "GEO",
             "CONTENT_ANGULAR"
         ],
-        "rank": 5
+        "rank": 3
     },
     {
         "company_name": "Degreed",
@@ -103,7 +65,45 @@
         "description_text": "Staff UI Engineer | Bengaluru, IN",
         "application_url": "https://job-boards.greenhouse.io/degreed/jobs/5837050004",
         "date_posted": null,
-        "scraped_at": "2026-06-12T06:46:41.627145",
+        "scraped_at": "2026-06-12T11:57:06.753254",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 4
+    },
+    {
+        "company_name": "TRG Screen",
+        "company_tier": "Tier_4_FinTech_GCC",
+        "category": "main",
+        "job_title": "Lead Developer (Full Stack)",
+        "location": "bengaluru, karnataka, india",
+        "description_text": "Lead Developer (Full Stack)",
+        "application_url": "https://job-boards.eu.greenhouse.io/trgscreen/jobs/4880954101",
+        "date_posted": null,
+        "scraped_at": "2026-06-12T12:00:17.799166",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 5
+    },
+    {
+        "company_name": "TRG Screen",
+        "company_tier": "Tier_4_FinTech_GCC",
+        "category": "main",
+        "job_title": "Lead Software Engineer- .Net Full Stack",
+        "location": "bengaluru, karnataka, india",
+        "description_text": "Lead Software Engineer- .Net Full Stack",
+        "application_url": "https://job-boards.eu.greenhouse.io/trgscreen/jobs/4783761101",
+        "date_posted": null,
+        "scraped_at": "2026-06-12T12:00:17.799311",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -114,17 +114,17 @@
         "rank": 6
     },
     {
-        "company_name": "Nagarro",
-        "company_tier": "Tier_3_Premium_Consulting",
+        "company_name": "TRG Screen",
+        "company_tier": "Tier_4_FinTech_GCC",
         "category": "main",
-        "job_title": "Angular Developer",
-        "location": "Not specified",
-        "description_text": "We're looking for a talented Angular Developer to join our team. As an Angular Developer, you will be responsible for designing and developing applications using the Angular framework.",
-        "application_url": "https://www.builtin.com/companies/nagarro/jobs/angular-developer",
+        "job_title": "Senior Software Engineer- Full Stack (Java + Angular) - 2",
+        "location": "bengaluru, karnataka, india",
+        "description_text": "Senior Software Engineer- Full Stack (Java + Angular) - 2",
+        "application_url": "https://job-boards.eu.greenhouse.io/trgscreen/jobs/4829851101",
         "date_posted": null,
-        "scraped_at": "2026-06-12T06:49:12.377175",
+        "scraped_at": "2026-06-12T12:00:17.799877",
         "extraction_verified": true,
-        "reviewer_notes": "Removed 2 hallucinated jobs, added 3 missing jobs",
+        "reviewer_notes": "",
         "passed_gates": [
             "TITLE",
             "GEO",
@@ -136,12 +136,12 @@
         "company_name": "TRG Screen",
         "company_tier": "Tier_4_FinTech_GCC",
         "category": "main",
-        "job_title": "Lead Developer (Full Stack)",
+        "job_title": "Senior Software Engineer (Java)",
         "location": "bengaluru, karnataka, india",
-        "description_text": "Lead Developer (Full Stack)",
-        "application_url": "https://job-boards.eu.greenhouse.io/trgscreen/jobs/4880954101",
+        "description_text": "Senior Software Engineer (Java)",
+        "application_url": "https://job-boards.eu.greenhouse.io/trgscreen/jobs/4751920101",
         "date_posted": null,
-        "scraped_at": "2026-06-12T06:49:58.123854",
+        "scraped_at": "2026-06-12T12:00:17.800025",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -152,63 +152,6 @@
         "rank": 8
     },
     {
-        "company_name": "TRG Screen",
-        "company_tier": "Tier_4_FinTech_GCC",
-        "category": "main",
-        "job_title": "Lead Software Engineer- .Net Full Stack",
-        "location": "bengaluru, karnataka, india",
-        "description_text": "Lead Software Engineer- .Net Full Stack",
-        "application_url": "https://job-boards.eu.greenhouse.io/trgscreen/jobs/4783761101",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T06:49:58.123957",
-        "extraction_verified": true,
-        "reviewer_notes": "",
-        "passed_gates": [
-            "TITLE",
-            "GEO",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 9
-    },
-    {
-        "company_name": "TRG Screen",
-        "company_tier": "Tier_4_FinTech_GCC",
-        "category": "main",
-        "job_title": "Senior Software Engineer- Full Stack (Java + Angular) - 2",
-        "location": "bengaluru, karnataka, india",
-        "description_text": "Senior Software Engineer- Full Stack (Java + Angular) - 2",
-        "application_url": "https://job-boards.eu.greenhouse.io/trgscreen/jobs/4829851101",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T06:49:58.124272",
-        "extraction_verified": true,
-        "reviewer_notes": "",
-        "passed_gates": [
-            "TITLE",
-            "GEO",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 10
-    },
-    {
-        "company_name": "TRG Screen",
-        "company_tier": "Tier_4_FinTech_GCC",
-        "category": "main",
-        "job_title": "Senior Software Engineer (Java)",
-        "location": "bengaluru, karnataka, india",
-        "description_text": "Senior Software Engineer (Java)",
-        "application_url": "https://job-boards.eu.greenhouse.io/trgscreen/jobs/4751920101",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T06:49:58.124378",
-        "extraction_verified": true,
-        "reviewer_notes": "",
-        "passed_gates": [
-            "TITLE",
-            "GEO",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 11
-    },
-    {
         "company_name": "Deutsche Bank",
         "company_tier": "Tier_1_Global_GCC",
         "category": "main",
@@ -217,7 +160,7 @@
         "description_text": "We are looking for an experienced Angular Developer to join our team. The ideal candidate will have a strong background in Angular and a passion for delivering high-quality solutions.",
         "application_url": "https://careers.db.com/professionals/search-roles/?keyword=Angular+Developer&country=India",
         "date_posted": null,
-        "scraped_at": "2026-06-12T06:51:28.438226",
+        "scraped_at": "2026-06-12T12:01:43.888067",
         "extraction_verified": true,
         "reviewer_notes": "Removed 0 hallucinated jobs, added 1 missed Angular listing",
         "passed_gates": [
@@ -225,7 +168,7 @@
             "GEO",
             "CONTENT_ANGULAR"
         ],
-        "rank": 12
+        "rank": 9
     },
     {
         "company_name": "Deutsche Bank",
@@ -236,9 +179,66 @@
         "description_text": "We are looking for an experienced Angular Software Engineer to join our team. The ideal candidate will have a strong background in Angular and a passion for delivering high-quality solutions.",
         "application_url": "https://careers.db.com/professionals/search-roles/?keyword=Angular+Software+Engineer&country=India",
         "date_posted": null,
-        "scraped_at": "2026-06-12T06:51:28.438230",
+        "scraped_at": "2026-06-12T12:01:43.888076",
         "extraction_verified": true,
         "reviewer_notes": "Removed 0 hallucinated jobs, added 1 missed Angular listing",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 10
+    },
+    {
+        "company_name": "Global Healthcare Exchange",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Sr Software Engineer - 1400",
+        "location": "hyderabad, telangana, india",
+        "description_text": "Sr Software Engineer - 1400",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4633643005",
+        "date_posted": null,
+        "scraped_at": "2026-06-12T12:10:27.567117",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 11
+    },
+    {
+        "company_name": "Global Healthcare Exchange",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Manager, Software Engineering - 1457",
+        "location": "hyderabad, telangana, india",
+        "description_text": "Manager, Software Engineering - 1457",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4651089005",
+        "date_posted": null,
+        "scraped_at": "2026-06-12T12:10:27.570509",
+        "extraction_verified": true,
+        "reviewer_notes": "",
+        "passed_gates": [
+            "TITLE",
+            "GEO",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 12
+    },
+    {
+        "company_name": "Global Healthcare Exchange",
+        "company_tier": "Tier_2_Big_Tech",
+        "category": "main",
+        "job_title": "Manager, Software Engineering - 1497",
+        "location": "hyderabad, telangana, india",
+        "description_text": "Manager, Software Engineering - 1497",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4664065005",
+        "date_posted": null,
+        "scraped_at": "2026-06-12T12:10:27.570666",
+        "extraction_verified": true,
+        "reviewer_notes": "",
         "passed_gates": [
             "TITLE",
             "GEO",
@@ -250,12 +250,12 @@
         "company_name": "Global Healthcare Exchange",
         "company_tier": "Tier_2_Big_Tech",
         "category": "main",
-        "job_title": "Sr Software Engineer - 1400",
+        "job_title": "Manager, Software Engineering - 1564",
         "location": "hyderabad, telangana, india",
-        "description_text": "Sr Software Engineer - 1400",
-        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4633643005",
+        "description_text": "Manager, Software Engineering - 1564",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4681656005",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:39.155033",
+        "scraped_at": "2026-06-12T12:10:27.570814",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -269,12 +269,12 @@
         "company_name": "Global Healthcare Exchange",
         "company_tier": "Tier_2_Big_Tech",
         "category": "main",
-        "job_title": "Manager, Software Engineering - 1457",
-        "location": "hyderabad, telangana, india",
-        "description_text": "Manager, Software Engineering - 1457",
-        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4651089005",
+        "job_title": "Principal Software Engineer",
+        "location": "office location or remote - usa",
+        "description_text": "Principal Software Engineer",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4697776005",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:39.157577",
+        "scraped_at": "2026-06-12T12:10:27.570966",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -288,12 +288,12 @@
         "company_name": "Global Healthcare Exchange",
         "company_tier": "Tier_2_Big_Tech",
         "category": "main",
-        "job_title": "Manager, Software Engineering - 1497",
+        "job_title": "Senior Software Engineer",
         "location": "hyderabad, telangana, india",
-        "description_text": "Manager, Software Engineering - 1497",
-        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4664065005",
+        "description_text": "Senior Software Engineer",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4698283005",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:39.157677",
+        "scraped_at": "2026-06-12T12:10:27.571812",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -307,12 +307,12 @@
         "company_name": "Global Healthcare Exchange",
         "company_tier": "Tier_2_Big_Tech",
         "category": "main",
-        "job_title": "Manager, Software Engineering - 1564",
-        "location": "hyderabad, telangana, india",
-        "description_text": "Manager, Software Engineering - 1564",
-        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4681656005",
+        "job_title": "Software Engineer II- Full Stack, Angular, Java, AWS",
+        "location": "office location or remote - usa",
+        "description_text": "Software Engineer II- Full Stack, Angular, Java, AWS",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4700778005",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:39.157793",
+        "scraped_at": "2026-06-12T12:10:27.572275",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -326,12 +326,12 @@
         "company_name": "Global Healthcare Exchange",
         "company_tier": "Tier_2_Big_Tech",
         "category": "main",
-        "job_title": "Principal Software Engineer",
-        "location": "office location or remote - usa",
-        "description_text": "Principal Software Engineer",
-        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4697776005",
+        "job_title": "Software Engineer III",
+        "location": "hyderabad, telangana, india",
+        "description_text": "Software Engineer III",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4698303005",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:39.157893",
+        "scraped_at": "2026-06-12T12:10:27.572458",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -345,12 +345,12 @@
         "company_name": "Global Healthcare Exchange",
         "company_tier": "Tier_2_Big_Tech",
         "category": "main",
-        "job_title": "Senior Software Engineer",
+        "job_title": "Software Engineer III - 1553",
         "location": "hyderabad, telangana, india",
-        "description_text": "Senior Software Engineer",
-        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4698283005",
+        "description_text": "Software Engineer III - 1553",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4679969005",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:39.159803",
+        "scraped_at": "2026-06-12T12:10:27.572605",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -364,12 +364,12 @@
         "company_name": "Global Healthcare Exchange",
         "company_tier": "Tier_2_Big_Tech",
         "category": "main",
-        "job_title": "Software Engineer II- Full Stack, Angular, Java, AWS",
+        "job_title": "Software Engineer III - Full Stack, Angular, Java, AWS",
         "location": "office location or remote - usa",
-        "description_text": "Software Engineer II- Full Stack, Angular, Java, AWS",
-        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4700778005",
+        "description_text": "Software Engineer III - Full Stack, Angular, Java, AWS",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4700819005",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:39.160116",
+        "scraped_at": "2026-06-12T12:10:27.573039",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -383,12 +383,12 @@
         "company_name": "Global Healthcare Exchange",
         "company_tier": "Tier_2_Big_Tech",
         "category": "main",
-        "job_title": "Software Engineer III",
+        "job_title": "Sr Software Engineer - 1454",
         "location": "hyderabad, telangana, india",
-        "description_text": "Software Engineer III",
-        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4698303005",
+        "description_text": "Sr Software Engineer - 1454",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4650821005",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:39.160215",
+        "scraped_at": "2026-06-12T12:10:27.573183",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -402,12 +402,12 @@
         "company_name": "Global Healthcare Exchange",
         "company_tier": "Tier_2_Big_Tech",
         "category": "main",
-        "job_title": "Software Engineer III - 1553",
+        "job_title": "Staff Software Engineer",
         "location": "hyderabad, telangana, india",
-        "description_text": "Software Engineer III - 1553",
-        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4679969005",
+        "description_text": "Staff Software Engineer",
+        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4668826005",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:39.160319",
+        "scraped_at": "2026-06-12T12:10:27.573493",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -418,15 +418,15 @@
         "rank": 22
     },
     {
-        "company_name": "Global Healthcare Exchange",
+        "company_name": "OneTrust",
         "company_tier": "Tier_2_Big_Tech",
         "category": "main",
-        "job_title": "Software Engineer III - Full Stack, Angular, Java, AWS",
-        "location": "office location or remote - usa",
-        "description_text": "Software Engineer III - Full Stack, Angular, Java, AWS",
-        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4700819005",
+        "job_title": "Staff Software Engineer- Frontend",
+        "location": "bengaluru, india",
+        "description_text": "Staff Software Engineer- Frontend",
+        "application_url": "https://job-boards.greenhouse.io/onetrust/jobs/7749618",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:39.160622",
+        "scraped_at": "2026-06-12T12:10:34.798782",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -437,15 +437,15 @@
         "rank": 23
     },
     {
-        "company_name": "Global Healthcare Exchange",
+        "company_name": "Envoy Global",
         "company_tier": "Tier_2_Big_Tech",
         "category": "main",
-        "job_title": "Sr Software Engineer - 1454",
+        "job_title": "Lead Software Engineer [.Net]",
         "location": "hyderabad, telangana, india",
-        "description_text": "Sr Software Engineer - 1454",
-        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4650821005",
+        "description_text": "Lead Software Engineer [.Net]",
+        "application_url": "https://job-boards.greenhouse.io/envoyglobalinc/jobs/5996082004",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:39.160738",
+        "scraped_at": "2026-06-12T12:10:40.177950",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -456,15 +456,15 @@
         "rank": 24
     },
     {
-        "company_name": "Global Healthcare Exchange",
+        "company_name": "Envoy Global",
         "company_tier": "Tier_2_Big_Tech",
         "category": "main",
-        "job_title": "Staff Software Engineer",
+        "job_title": "Senior Software Engineer (UI)",
         "location": "hyderabad, telangana, india",
-        "description_text": "Staff Software Engineer",
-        "application_url": "https://job-boards.greenhouse.io/globalhealthcareexchangeinc/jobs/4668826005",
+        "description_text": "Senior Software Engineer (UI)",
+        "application_url": "https://job-boards.greenhouse.io/envoyglobalinc/jobs/5843157004",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:39.160945",
+        "scraped_at": "2026-06-12T12:10:40.178107",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -475,15 +475,15 @@
         "rank": 25
     },
     {
-        "company_name": "OneTrust",
-        "company_tier": "Tier_2_Big_Tech",
+        "company_name": "Epic Kids",
+        "company_tier": "Tier_4_Global_Remote",
         "category": "main",
-        "job_title": "Staff Software Engineer- Frontend",
-        "location": "bengaluru, india",
-        "description_text": "Staff Software Engineer- Frontend",
-        "application_url": "https://job-boards.greenhouse.io/onetrust/jobs/7749618",
+        "job_title": "Junior Software Engineer, Full-Stack",
+        "location": "remote, us",
+        "description_text": "Junior Software Engineer, Full-Stack",
+        "application_url": "https://job-boards.greenhouse.io/epickids/jobs/7751646003",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:44.619991",
+        "scraped_at": "2026-06-12T12:11:28.366475",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -494,15 +494,15 @@
         "rank": 26
     },
     {
-        "company_name": "Envoy Global",
-        "company_tier": "Tier_2_Big_Tech",
+        "company_name": "Epic Kids",
+        "company_tier": "Tier_4_Global_Remote",
         "category": "main",
-        "job_title": "Lead Software Engineer [.Net]",
-        "location": "hyderabad, telangana, india",
-        "description_text": "Lead Software Engineer [.Net]",
-        "application_url": "https://job-boards.greenhouse.io/envoyglobalinc/jobs/5996082004",
+        "job_title": "Senior Software Engineer, Full-Stack",
+        "location": "remote, us",
+        "description_text": "Senior Software Engineer, Full-Stack",
+        "application_url": "https://job-boards.greenhouse.io/epickids/jobs/7751592003",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:50.492306",
+        "scraped_at": "2026-06-12T12:11:28.367078",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -513,15 +513,15 @@
         "rank": 27
     },
     {
-        "company_name": "Envoy Global",
-        "company_tier": "Tier_2_Big_Tech",
+        "company_name": "Epic Kids",
+        "company_tier": "Tier_4_Global_Remote",
         "category": "main",
-        "job_title": "Senior Software Engineer (UI)",
-        "location": "hyderabad, telangana, india",
-        "description_text": "Senior Software Engineer (UI)",
-        "application_url": "https://job-boards.greenhouse.io/envoyglobalinc/jobs/5843157004",
+        "job_title": "Senior Software Engineer, Full-Stack \u2014 Content Tools",
+        "location": "bangalore, india (remote within india)",
+        "description_text": "Senior Software Engineer, Full-Stack \u2014 Content Tools",
+        "application_url": "https://job-boards.greenhouse.io/epickids/jobs/7751667003",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:00:50.492422",
+        "scraped_at": "2026-06-12T12:11:28.367227",
         "extraction_verified": true,
         "reviewer_notes": "",
         "passed_gates": [
@@ -532,72 +532,15 @@
         "rank": 28
     },
     {
-        "company_name": "Epic Kids",
-        "company_tier": "Tier_4_Global_Remote",
-        "category": "main",
-        "job_title": "Junior Software Engineer, Full-Stack",
-        "location": "remote, us",
-        "description_text": "Junior Software Engineer, Full-Stack",
-        "application_url": "https://job-boards.greenhouse.io/epickids/jobs/7751646003",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T07:01:38.647683",
-        "extraction_verified": true,
-        "reviewer_notes": "",
-        "passed_gates": [
-            "TITLE",
-            "GEO",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 29
-    },
-    {
-        "company_name": "Epic Kids",
-        "company_tier": "Tier_4_Global_Remote",
-        "category": "main",
-        "job_title": "Senior Software Engineer, Full-Stack",
-        "location": "remote, us",
-        "description_text": "Senior Software Engineer, Full-Stack",
-        "application_url": "https://job-boards.greenhouse.io/epickids/jobs/7751592003",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T07:01:38.648216",
-        "extraction_verified": true,
-        "reviewer_notes": "",
-        "passed_gates": [
-            "TITLE",
-            "GEO",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 30
-    },
-    {
-        "company_name": "Epic Kids",
-        "company_tier": "Tier_4_Global_Remote",
-        "category": "main",
-        "job_title": "Senior Software Engineer, Full-Stack \u2014 Content Tools",
-        "location": "bangalore, india (remote within india)",
-        "description_text": "Senior Software Engineer, Full-Stack \u2014 Content Tools",
-        "application_url": "https://job-boards.greenhouse.io/epickids/jobs/7751667003",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T07:01:38.648329",
-        "extraction_verified": true,
-        "reviewer_notes": "",
-        "passed_gates": [
-            "TITLE",
-            "GEO",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 31
-    },
-    {
         "company_name": "Flipkart",
         "company_tier": "Tier_7_Domestic_Unicorn",
         "category": "indian_product",
         "job_title": "Angular Developer",
         "location": "Not specified",
-        "description_text": "Build scalable and efficient web applications using Angular framework.",
+        "description_text": "We are looking for skilled Angular Developers to join our team. As an Angular Developer, you will be responsible for building and maintaining the user interface and user experience of our web applications using Angular framework.",
         "application_url": "https://www.flipkartcareers.com/job-search?query=Angular+Developer",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:01:49.320550",
+        "scraped_at": "2026-06-12T12:11:38.510306",
         "extraction_verified": true,
         "reviewer_notes": "Removed 0 hallucinated jobs, added 1 missed Angular listing",
         "passed_gates": [
@@ -605,7 +548,7 @@
             "GEO",
             "CONTENT_ANGULAR"
         ],
-        "rank": 32
+        "rank": 29
     },
     {
         "company_name": "Keka HR",
@@ -616,7 +559,7 @@
         "description_text": "We are on a mission to make every employee a growth enabler in every small medium business across this nation and the other nations.",
         "application_url": "https://www.keka.com/careers",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:05:59.490814",
+        "scraped_at": "2026-06-12T12:15:47.920703",
         "extraction_verified": true,
         "reviewer_notes": "Removed 0 hallucinated jobs, added 1 missed Angular listing",
         "passed_gates": [
@@ -624,7 +567,7 @@
             "GEO",
             "CONTENT_ANGULAR"
         ],
-        "rank": 33
+        "rank": 30
     },
     {
         "company_name": "Innovaccer",
@@ -632,10 +575,10 @@
         "category": "indian_product",
         "job_title": "Angular Developer",
         "location": "Not specified",
-        "description_text": "We are looking for an Angular Developer to join our team. As an Angular Developer, you will be responsible for designing, developing, and testing Angular applications.",
+        "description_text": "We are looking for an Angular Developer to join our team. The ideal candidate will have experience with Angular and a strong foundation in computer science.",
         "application_url": "https://innovaccer.com/careers/jobs",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:06:22.805023",
+        "scraped_at": "2026-06-12T12:16:06.019089",
         "extraction_verified": true,
         "reviewer_notes": "Removed 0 hallucinated jobs, added 1 missed Angular listing",
         "passed_gates": [
@@ -643,7 +586,7 @@
             "GEO",
             "CONTENT_ANGULAR"
         ],
-        "rank": 34
+        "rank": 31
     },
     {
         "company_name": "Testbook",
@@ -654,53 +597,34 @@
         "description_text": "We engineered the mammoth ship that is Testbook. We learn, we innovate, we transform. To work on the latest tech, join us!",
         "application_url": "https://testbook.com/careers",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:08:24.275620",
+        "scraped_at": "2026-06-12T12:17:58.708611",
         "extraction_verified": true,
-        "reviewer_notes": "Removed 0 hallucinated jobs, added 9 missed jobs",
+        "reviewer_notes": "Removed 0 hallucinated jobs, added 6 missed jobs",
         "passed_gates": [
             "TITLE",
             "GEO",
             "CONTENT_ANGULAR"
         ],
-        "rank": 35
+        "rank": 32
     },
     {
-        "company_name": "Freshworks",
+        "company_name": "Chargebee",
         "company_tier": "Tier_7_Domestic_Unicorn",
         "category": "indian_product",
         "job_title": "Angular Developer",
-        "location": "Chennai, India",
-        "description_text": "Angular Developer",
-        "application_url": "https://careers.freshworks.com/jobs?q=Angular&location=India",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T07:10:33.172032",
-        "extraction_verified": true,
-        "reviewer_notes": "Removed 1 hallucinated job, added 1 missed Angular listing",
-        "passed_gates": [
-            "TITLE",
-            "GEO",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 36
-    },
-    {
-        "company_name": "Sleepyhead",
-        "company_tier": "Tier_7_Domestic_Unicorn",
-        "category": "indian_product",
-        "job_title": "Full Stack Developer (Angular)",
         "location": "India",
-        "description_text": "Design, develop, and deploy full-stack applications using Angular, Node.js, and MongoDB.",
-        "application_url": "https://careers.sleepyhead.com/jobs/34567",
+        "description_text": "Design, develop, and deploy scalable and maintainable Angular applications. Collaborate with designers and product managers to create seamless user experiences.",
+        "application_url": "https://careers.chargebee.com/jobs/1234567893",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:14:38.366070",
+        "scraped_at": "2026-06-12T12:20:36.453354",
         "extraction_verified": true,
-        "reviewer_notes": "No changes made",
+        "reviewer_notes": "Removed 0 hallucinated jobs, added 1 missed Software Engineer listing",
         "passed_gates": [
             "TITLE",
             "GEO",
             "CONTENT_ANGULAR"
         ],
-        "rank": 37
+        "rank": 33
     },
     {
         "company_name": "Photon",
@@ -711,9 +635,85 @@
         "description_text": "Join our team and take your next step towards a meaningful career",
         "application_url": "https://www.photon.com/careers?search=Angular",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:17:15.015953",
+        "scraped_at": "2026-06-12T12:27:35.946694",
         "extraction_verified": true,
-        "reviewer_notes": "Removed 0 hallucinated jobs, added 1 missed Angular listing",
+        "reviewer_notes": "Removed 0 hallucinated jobs, added 0 missed Angular listings, fixed 1 duplicate Angular listing",
+        "passed_gates": [
+            "TITLE",
+            "GEO_BYPASSED",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 34
+    },
+    {
+        "company_name": "Photon",
+        "company_tier": "Tier_8_Background_Service",
+        "category": "service",
+        "job_title": "Angular Developer",
+        "location": "Not specified",
+        "description_text": "Join our team and take your next step towards a meaningful career",
+        "application_url": "https://www.photon.com/careers?search=Angular",
+        "date_posted": null,
+        "scraped_at": "2026-06-12T12:27:35.946703",
+        "extraction_verified": true,
+        "reviewer_notes": "Removed 0 hallucinated jobs, added 0 missed Angular listings, fixed 1 duplicate Angular listing",
+        "passed_gates": [
+            "TITLE",
+            "GEO_BYPASSED",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 35
+    },
+    {
+        "company_name": "Tata Elxsi",
+        "company_tier": "Tier_8_Background_Service",
+        "category": "service",
+        "job_title": "Angular Developer",
+        "location": "Bangalore/Chennai",
+        "description_text": "8 - 12 years | B.E, B.Tech, MCA, M.E, M.Tech | Angular Developer",
+        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular&job=RFH/06670",
+        "date_posted": null,
+        "scraped_at": "2026-06-12T12:28:11.489682",
+        "extraction_verified": true,
+        "reviewer_notes": "Removed 0 hallucinated jobs, added 4 missed listings",
+        "passed_gates": [
+            "TITLE",
+            "GEO_BYPASSED",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 36
+    },
+    {
+        "company_name": "Tata Elxsi",
+        "company_tier": "Tier_8_Background_Service",
+        "category": "service",
+        "job_title": "OpenWRT RDK B Developer",
+        "location": "Bangalore",
+        "description_text": "5 - 10 years | B.E, B.Tech, MCA, M.E, M.Tech | OpenWRT RDK B Developer",
+        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular&job=RFH/06696",
+        "date_posted": null,
+        "scraped_at": "2026-06-12T12:28:11.489695",
+        "extraction_verified": true,
+        "reviewer_notes": "Removed 0 hallucinated jobs, added 4 missed listings",
+        "passed_gates": [
+            "TITLE",
+            "GEO_BYPASSED",
+            "CONTENT_ANGULAR"
+        ],
+        "rank": 37
+    },
+    {
+        "company_name": "Tata Elxsi",
+        "company_tier": "Tier_8_Background_Service",
+        "category": "service",
+        "job_title": "Python Developer (Principal Python Developer / Architect)",
+        "location": "Bangalore/Chennai/Trivandrum",
+        "description_text": "7 - 13 years | B.E, B.Tech, MCA, M.E, M.Tech | Python Developer",
+        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular&job=RFH/06482",
+        "date_posted": null,
+        "scraped_at": "2026-06-12T12:28:11.489700",
+        "extraction_verified": true,
+        "reviewer_notes": "Removed 0 hallucinated jobs, added 4 missed listings",
         "passed_gates": [
             "TITLE",
             "GEO_BYPASSED",
@@ -722,17 +722,17 @@
         "rank": 38
     },
     {
-        "company_name": "Photon",
+        "company_name": "Tata Elxsi",
         "company_tier": "Tier_8_Background_Service",
         "category": "service",
-        "job_title": "Angular Developer",
-        "location": "Not specified",
-        "description_text": "Come be part of a team with exceptional people that work together to pursue one shared goal- surprise and delight the customer with a revolutionary digital experience.",
-        "application_url": "https://www.photon.com/careers?search=Angular",
+        "job_title": "Linux Platform Developer",
+        "location": "Bangalore / Trivandrum / Chennai / Hyderabad",
+        "description_text": "6 - 15 years | B.E, B.Tech, MCA, M.E, M.Tech | Linux Platform Developer",
+        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular&job=RFH/06568",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:17:15.015962",
+        "scraped_at": "2026-06-12T12:28:11.489706",
         "extraction_verified": true,
-        "reviewer_notes": "Removed 0 hallucinated jobs, added 1 missed Angular listing",
+        "reviewer_notes": "Removed 0 hallucinated jobs, added 4 missed listings",
         "passed_gates": [
             "TITLE",
             "GEO_BYPASSED",
@@ -747,9 +747,9 @@
         "job_title": "Angular Developer",
         "location": "Bangalore/Chennai",
         "description_text": "8 - 12 years | B.E, B.Tech, MCA, M.E, M.Tech | Angular Developer",
-        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular&job=RFH/06670",
+        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:17:43.513950",
+        "scraped_at": "2026-06-12T12:28:11.489711",
         "extraction_verified": true,
         "reviewer_notes": "Removed 0 hallucinated jobs, added 4 missed listings",
         "passed_gates": [
@@ -763,12 +763,12 @@
         "company_name": "Tata Elxsi",
         "company_tier": "Tier_8_Background_Service",
         "category": "service",
-        "job_title": "OpenWRT RDK B Developer",
-        "location": "Bangalore",
-        "description_text": "5 - 10 years | B.E, B.Tech, MCA, M.E, M.Tech | OpenWRT RDK B Developer",
-        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular&job=RFH/06696",
+        "job_title": "Design Engineer",
+        "location": "UK / London / Coventry / Gaydon",
+        "description_text": "3 - 5 years | Bachelors / Masters | Design Engineer",
+        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:17:43.513964",
+        "scraped_at": "2026-06-12T12:28:11.489715",
         "extraction_verified": true,
         "reviewer_notes": "Removed 0 hallucinated jobs, added 4 missed listings",
         "passed_gates": [
@@ -782,12 +782,12 @@
         "company_name": "Tata Elxsi",
         "company_tier": "Tier_8_Background_Service",
         "category": "service",
-        "job_title": "Python Developer (Principal Python Developer / Architect)",
-        "location": "Bangalore/Chennai/Trivandrum",
-        "description_text": "7 - 13 years | B.E, B.Tech, MCA, M.E, M.Tech | Python Developer",
-        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular&job=RFH/06482",
+        "job_title": "Lead Engineer",
+        "location": "UK / Gaydon",
+        "description_text": "4 - 7 years | Bachelors / Masters | Lead Engineer",
+        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular",
         "date_posted": null,
-        "scraped_at": "2026-06-12T07:17:43.513970",
+        "scraped_at": "2026-06-12T12:28:11.489720",
         "extraction_verified": true,
         "reviewer_notes": "Removed 0 hallucinated jobs, added 4 missed listings",
         "passed_gates": [
@@ -796,81 +796,5 @@
             "CONTENT_ANGULAR"
         ],
         "rank": 42
-    },
-    {
-        "company_name": "Tata Elxsi",
-        "company_tier": "Tier_8_Background_Service",
-        "category": "service",
-        "job_title": "Linux Platform Developer",
-        "location": "Bangalore / Trivandrum / Chennai / Hyderabad",
-        "description_text": "6 - 15 years | B.E, B.Tech, MCA, M.E, M.Tech | Linux Platform Developer",
-        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular&job=RFH/06568",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T07:17:43.513976",
-        "extraction_verified": true,
-        "reviewer_notes": "Removed 0 hallucinated jobs, added 4 missed listings",
-        "passed_gates": [
-            "TITLE",
-            "GEO_BYPASSED",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 43
-    },
-    {
-        "company_name": "Tata Elxsi",
-        "company_tier": "Tier_8_Background_Service",
-        "category": "service",
-        "job_title": "Angular Developer",
-        "location": "Bangalore/Chennai",
-        "description_text": "8 - 12 years | B.E, B.Tech, MCA, M.E, M.Tech | Angular Developer",
-        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T07:17:43.513981",
-        "extraction_verified": true,
-        "reviewer_notes": "Removed 0 hallucinated jobs, added 4 missed listings",
-        "passed_gates": [
-            "TITLE",
-            "GEO_BYPASSED",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 44
-    },
-    {
-        "company_name": "Tata Elxsi",
-        "company_tier": "Tier_8_Background_Service",
-        "category": "service",
-        "job_title": "Design Engineer",
-        "location": "UK / London / Coventry / Gaydon",
-        "description_text": "3 - 5 years | Bachelors / Masters | Design Engineer",
-        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T07:17:43.513993",
-        "extraction_verified": true,
-        "reviewer_notes": "Removed 0 hallucinated jobs, added 4 missed listings",
-        "passed_gates": [
-            "TITLE",
-            "GEO_BYPASSED",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 45
-    },
-    {
-        "company_name": "Tata Elxsi",
-        "company_tier": "Tier_8_Background_Service",
-        "category": "service",
-        "job_title": "Lead Engineer",
-        "location": "UK / Gaydon",
-        "description_text": "4 - 7 years | Bachelors / Masters | Lead Engineer",
-        "application_url": "https://www.tataelxsi.com/careers/job-openings?search=Angular",
-        "date_posted": null,
-        "scraped_at": "2026-06-12T07:17:43.514000",
-        "extraction_verified": true,
-        "reviewer_notes": "Removed 0 hallucinated jobs, added 4 missed listings",
-        "passed_gates": [
-            "TITLE",
-            "GEO_BYPASSED",
-            "CONTENT_ANGULAR"
-        ],
-        "rank": 46
     }
 ]
