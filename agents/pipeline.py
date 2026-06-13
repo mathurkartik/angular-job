@@ -1,10 +1,9 @@
 """
-Pipeline Orchestrator: Chains all 4 agents together.
+Pipeline Orchestrator: Chains extraction agents together.
 
 Flow:
   Playwright (raw text) -> Agent 1 (Extract) -> Agent 2 (Review Extraction)
-  -> Filter Pipeline -> Agent 3 (Score) -> Agent 4 (Review Score)
-  -> jobs.json
+  -> Filter Pipeline -> jobs.json
 """
 from typing import List, Dict, Any
 from schemas.job_listing import (
@@ -19,8 +18,38 @@ from utils.logger import get_logger
 logger = get_logger("pipeline")
 
 
+def _is_likely_hallucinated(job: dict, company_url: str = "") -> bool:
+    """Catch obvious LLM hallucinations before they enter the pipeline."""
+    url = job.get("application_url", "")
+    desc = job.get("description_text", "")
+
+    # Search page URLs are never valid job postings
+    search_indicators = ["?q=", "?query=", "?keyword=", "?search=", "?k="]
+    for indicator in search_indicators:
+        if indicator in url:
+            # If the search indicator is also in the company's configured URL, it is allowed
+            if not company_url or indicator not in company_url:
+                return True
+
+    # Placeholder/sequential job IDs
+    if "/jobs/1234567" in url or "/jobs/0000" in url:
+        return True
+
+    # Cookie-cutter descriptions that are clearly not from a real JD
+    hallucination_phrases = [
+        "we are looking for an experienced angular developer to join our team",
+        "the ideal candidate will have a strong background in angular",
+        "design, develop, and deploy scalable and maintainable angular",
+        "we are looking for an angular developer to join our team",
+    ]
+    if any(phrase in desc.lower() for phrase in hallucination_phrases):
+        return True
+
+    return False
+
+
 class AgentPipeline:
-    """Orchestrates the 5-agent pipeline for a single company page."""
+    """Orchestrates the 2-agent pipeline for a single company page."""
 
     def __init__(self):
         self.extractor = ExtractorAgent()
@@ -55,9 +84,12 @@ class AgentPipeline:
         review_result = self.extraction_reviewer.review(raw_text, extracted_jobs, base_url)
         reviewed_jobs_data = review_result.get("reviewed_jobs", extracted_jobs)
 
-        # Convert to ReviewedJobListing models
+        # ── Post-reviewer hallucination filter ──
         reviewed_listings: List[ReviewedJobListing] = []
         for job_data in reviewed_jobs_data:
+            if _is_likely_hallucinated(job_data, base_url):
+                logger.warning(f"Dropped likely hallucinated job: {job_data.get('job_title')} at {company_name}")
+                continue
             try:
                 listing = ReviewedJobListing(
                     company_name=company_name,
@@ -69,6 +101,7 @@ class AgentPipeline:
                     application_url=job_data.get("application_url", base_url),
                     extraction_verified=True,
                     reviewer_notes=review_result.get("changes_made", ""),
+                    source="llm_fallback",
                 )
                 reviewed_listings.append(listing)
             except Exception as e:

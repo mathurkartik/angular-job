@@ -5,8 +5,8 @@ A high-performance, stealth-enabled job scraping pipeline specifically tuned for
 ## Features
 - **3-Tier Architecture**: Strict filtering for global tech, relaxed for domestic product companies, and minimal for service-based market intelligence.
 - **Stealth Browsing**: Uses `playwright-stealth` with identity rotation and pacing to evade Cloudflare/Datadome bot detection.
-- **Semantic Scoring**: 5-pillar keyword scoring engine (Core Stack, Modern Angular, State Management, Testing, Enterprise Scale) to rank jobs automatically.
-- **Factory Pattern Scrapers**: Automatically routes companies to Workday, Greenhouse, Lever, or Generic scrapers.
+- **LLM Extraction**: Uses Groq LLM to intelligently extract job listings from unstructured HTML and text.
+- **Factory Pattern Scrapers**: Automatically routes companies to Workday, Greenhouse, Lever, Phenom or Generic scrapers.
 
 ## Installation
 

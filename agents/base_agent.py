@@ -7,14 +7,16 @@ import json
 from typing import Dict, Any, Optional
 from groq import Groq
 from utils.logger import get_logger
+from utils.groq_rate_limiter import GroqRateLimiter
 
 logger = get_logger("agent.base")
+rate_limiter = GroqRateLimiter()
 
 
 class BaseGroqAgent:
     """Abstract base class for all Groq-powered agents."""
 
-    def __init__(self, name: str, model: str = "llama-3.1-8b-instant"):
+    def __init__(self, name: str, model: str = "llama-3.3-70b-versatile"):
         self.name = name
         self.model = model
         
@@ -42,6 +44,9 @@ class BaseGroqAgent:
 
         while attempts < max_attempts:
             try:
+                # Pace calls using the rate limiter (3500 estimated tokens per call)
+                rate_limiter.wait_if_needed(3500)
+                
                 response = self.client.chat.completions.create(
                     messages=[
                         {"role": "system", "content": system_prompt},
@@ -51,6 +56,11 @@ class BaseGroqAgent:
                     response_format={"type": "json_object"},
                     temperature=0.1,  # Low temperature for deterministic, factual output
                 )
+                
+                # Update limiter with actual token usage if available
+                if response.usage:
+                    rate_limiter.update_actual_usage(3500, response.usage.total_tokens)
+                
                 content = response.choices[0].message.content
                 return json.loads(content)
             except Exception as e:

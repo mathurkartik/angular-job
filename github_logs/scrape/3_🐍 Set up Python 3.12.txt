@@ -1,0 +1,21 @@
+﻿2026-06-10T19:04:33.5887878Z ##[group]Run actions/setup-python@v5
+2026-06-10T19:04:33.5889154Z with:
+2026-06-10T19:04:33.5890033Z   python-version: 3.12
+2026-06-10T19:04:33.5891030Z   cache: pip
+2026-06-10T19:04:33.5892147Z   check-latest: false
+2026-06-10T19:04:33.5903380Z   token: ***
+2026-06-10T19:04:33.5904564Z   update-environment: true
+2026-06-10T19:04:33.5905871Z   allow-prereleases: false
+2026-06-10T19:04:33.5907615Z   freethreaded: false
+2026-06-10T19:04:33.5908974Z ##[endgroup]
+2026-06-10T19:04:33.7741826Z ##[group]Installed versions
+2026-06-10T19:04:33.7832047Z Successfully set up CPython (3.12.13)
+2026-06-10T19:04:33.7839533Z ##[endgroup]
+2026-06-10T19:04:33.8314021Z [command]/opt/hostedtoolcache/Python/3.12.13/x64/bin/pip cache dir
+2026-06-10T19:04:34.1062521Z /home/runner/.cache/pip
+2026-06-10T19:04:34.2738155Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.13-pip-c9e52a4593956f1fadaf48ddc948a1b4e18b28c81112b108f9c3bcbec3ecd753
+2026-06-10T19:04:34.7150797Z Received 69438864 of 69438864 (100.0%), 163.5 MBs/sec
+2026-06-10T19:04:34.7153682Z Cache Size: ~66 MB (69438864 B)
+2026-06-10T19:04:34.7184219Z [command]/usr/bin/tar -xf /home/runner/work/_temp/e05579a2-a260-4e54-bae9-22883bbf1162/cache.tzst -P -C /home/runner/work/angular-job/angular-job --use-compress-program unzstd
+2026-06-10T19:04:34.8284396Z Cache restored successfully
+2026-06-10T19:04:34.8325867Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.13-pip-c9e52a4593956f1fadaf48ddc948a1b4e18b28c81112b108f9c3bcbec3ecd753

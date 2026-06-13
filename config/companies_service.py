@@ -18,7 +18,8 @@ COMPANIES = [
     {"name": "Synechron", "tier": "Tier_8_Background_Service", "url": "https://synechron.wd1.myworkdayjobs.com/SynechronCareers?q=Angular", "portal_type": "workday"},
     {"name": "Photon", "tier": "Tier_8_Background_Service", "url": "https://www.photon.com/careers?search=Angular", "portal_type": "generic"},
     {"name": "Tata Elxsi", "tier": "Tier_8_Background_Service", "url": "https://www.tataelxsi.com/careers/job-openings?search=Angular", "portal_type": "generic"},
-    {"name": "Happiest Minds", "tier": "Tier_8_Background_Service", "url": "https://careers.smartrecruiters.com/HappiestMindsTechnologies1", "portal_type": "smartrecruiters"},
+    # Audited 2026-06-13: no Angular openings found
+    # {"name": "Happiest Minds", "tier": "Tier_8_Background_Service", "url": "https://careers.smartrecruiters.com/HappiestMindsTechnologies1", "portal_type": "smartrecruiters"},
     {"name": "ValueLabs", "tier": "Tier_8_Background_Service", "url": "https://careers.valuelabs.com/", "portal_type": "generic"},
     {"name": "QBurst", "tier": "Tier_8_Background_Service", "url": "https://www.qburst.com/en-in/company/career/openings/", "portal_type": "generic"},
     {"name": "Cyient", "tier": "Tier_8_Background_Service", "url": "https://careers.cyient.com/cyient/", "portal_type": "generic"},

@@ -1,0 +1,611 @@
+[
+    {
+        "name": "SLB",
+        "portal": "generic",
+        "url": "https://careers.slb.com/job-search?query=Software",
+        "final_url": "https://careers.slb.com/job-search?query=Software",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Thoughtworks",
+        "portal": "greenhouse",
+        "url": "https://www.thoughtworks.com/careers/jobs/",
+        "final_url": "https://www.thoughtworks.com/careers/jobs",
+        "reason": "Greenhouse portal type but URL is not Greenhouse"
+    },
+    {
+        "name": "PwC",
+        "portal": "generic",
+        "url": "https://jobs.pwc.com/global/en/search-results?keywords=Engineer",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "JPMorgan Chase",
+        "portal": "workday",
+        "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1002/",
+        "final_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1002/",
+        "reason": "Workday portal type but URL is not Workday"
+    },
+    {
+        "name": "Uplers",
+        "portal": "talent_network",
+        "url": "https://www.uplers.com/join-as-a-talent/",
+        "final_url": "https://www.uplers.com/join-as-a-talent/",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Andela",
+        "portal": "talent_network",
+        "url": "https://andela.com/talent/",
+        "final_url": "https://www.andela.com/talent",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Optimum",
+        "portal": "talent_network",
+        "url": "https://www.optimum.io/careers/",
+        "final_url": "",
+        "reason": "Error: All connection attempts failed"
+    },
+    {
+        "name": "Ivanti",
+        "portal": "generic",
+        "url": "https://careers.ivanti.com/",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "BNY Mellon",
+        "portal": "generic",
+        "url": "https://bny.eightfold.ai/careers?query=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "UBS",
+        "portal": "generic",
+        "url": "https://jobs.ubs.com/search/?q=Angular&location=India",
+        "final_url": "https://jobs.ubs.com/search/?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Societe Generale GSC",
+        "portal": "generic",
+        "url": "https://careers.societegenerale.com/en/search-jobs?keyword=Angular&location=India",
+        "final_url": "https://careers.societegenerale.com/en/search-jobs?keyword=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "SS&C Technologies",
+        "portal": "workday",
+        "url": "https://wd1.myworkdaysite.com/en-US/recruiting/ssctech/SSCTechnologies?q=Angular",
+        "final_url": "https://wd1.myworkdaysite.com/en-US/recruiting/ssctech/SSCTechnologies?q=Angular",
+        "reason": "Workday portal type but URL is not Workday"
+    },
+    {
+        "name": "Zoho",
+        "portal": "generic",
+        "url": "https://careers.zoho.com/jobs/Careers?search=Angular",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Leadstreams",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/leadstreams?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/leadstreams?q=Angular&location=India",
+        "reason": "HTTP 500"
+    },
+    {
+        "name": "Swiggy",
+        "portal": "generic",
+        "url": "https://careers.swiggy.com/search?q=Engineer",
+        "final_url": "https://careers.swiggy.com/search?q=Engineer",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Zepto",
+        "portal": "generic",
+        "url": "https://www.zeptonow.com/careers/engineering",
+        "final_url": "https://www.zepto.com/careers/engineering",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Zeta",
+        "portal": "generic",
+        "url": "https://careers.zeta.tech/jobs/?department=Engineering",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "LeadSquared",
+        "portal": "generic",
+        "url": "https://careers.leadsquared.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'careers.leadsquared.com'. (_ssl.c:1000)"
+    },
+    {
+        "name": "Zenoti",
+        "portal": "generic",
+        "url": "https://careers.zenoti.com/jobs?q=Angular&location=India",
+        "final_url": "https://careers.zenoti.com/jobs?q=Angular&location=India",
+        "reason": "HTTP 401"
+    },
+    {
+        "name": "Icertis",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/icertis?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/icertis?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "MindTickle",
+        "portal": "generic",
+        "url": "https://careers.mindtickle.com/jobs?q=Angular&location=India",
+        "final_url": "https://careers.mindtickle.com/jobs?q=Angular&location=India",
+        "reason": "HTTP 400"
+    },
+    {
+        "name": "Druva",
+        "portal": "generic",
+        "url": "https://careers.druva.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Eightfold AI",
+        "portal": "generic",
+        "url": "https://careers.eightfold.ai/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Edifecs",
+        "portal": "generic",
+        "url": "https://careers.edifecs.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Whatfix",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/whatfix?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/whatfix?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Amagi",
+        "portal": "generic",
+        "url": "https://careers.amagi.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Gupshup",
+        "portal": "generic",
+        "url": "https://careers.gupshup.io/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Capillary Technologies",
+        "portal": "generic",
+        "url": "https://careers.capillarytech.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Kissflow",
+        "portal": "generic",
+        "url": "https://careers.kissflow.com/jobs?q=Angular&location=India",
+        "final_url": "https://careers.kissflow.com/jobs?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "RateGain",
+        "portal": "generic",
+        "url": "https://careers.rategain.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "CleverTap",
+        "portal": "generic",
+        "url": "https://careers.clevertap.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "WebEngage",
+        "portal": "generic",
+        "url": "https://careers.webengage.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Vymo",
+        "portal": "generic",
+        "url": "https://careers.vymo.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "ClearTax",
+        "portal": "generic",
+        "url": "https://careers.cleartax.in/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "OfBusiness",
+        "portal": "generic",
+        "url": "https://careers.ofbusiness.com/jobs?q=Angular&location=India",
+        "final_url": "https://www.ofbcareers.com/jobs?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Khatabook",
+        "portal": "generic",
+        "url": "https://careers.khatabook.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Navi",
+        "portal": "generic",
+        "url": "https://careers.navi.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Yubi",
+        "portal": "generic",
+        "url": "https://careers.go-yubi.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Lendingkart",
+        "portal": "generic",
+        "url": "https://careers.lendingkart.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "CoinDCX",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/coindcx?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/coindcx?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "CoinSwitch",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/coinswitch?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/coinswitch?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Mudrex",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/mudrex?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/mudrex?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "WazirX",
+        "portal": "generic",
+        "url": "https://careers.wazirx.com/jobs?q=Angular&location=India",
+        "final_url": "https://careers.wazirx.com/jobs?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Pratilipi",
+        "portal": "generic",
+        "url": "https://careers.pratilipi.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Pocket FM",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/pocketfm?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/pocketfm?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Kuku FM",
+        "portal": "generic",
+        "url": "https://careers.kukufm.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Classplus",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/classplus?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/classplus?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Eruditus",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/eruditus?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/eruditus?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Bizongo",
+        "portal": "generic",
+        "url": "https://careers.bizongo.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1000)"
+    },
+    {
+        "name": "ElasticRun",
+        "portal": "generic",
+        "url": "https://careers.elasticrun.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Shiprocket",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/shiprocket?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/shiprocket?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Shadowfax",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/shadowfax?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/shadowfax?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Porter",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/porter?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/porter?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Log9 Materials",
+        "portal": "generic",
+        "url": "https://careers.log9materials.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Euler Motors",
+        "portal": "generic",
+        "url": "https://careers.eulermotors.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "SUN Mobility",
+        "portal": "generic",
+        "url": "https://careers.sunmobility.co.in/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Ather Energy",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/atherenergy?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/atherenergy?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Simple Energy",
+        "portal": "generic",
+        "url": "https://careers.simpleenergy.in/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Ultraviolette Automotive",
+        "portal": "generic",
+        "url": "https://careers.ultraviolette.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Rapido",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/rapido?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/rapido?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Chalo",
+        "portal": "generic",
+        "url": "https://careers.chalo.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Zoomcar",
+        "portal": "generic",
+        "url": "https://careers.zoomcar.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Drivezy",
+        "portal": "generic",
+        "url": "https://careers.drivezy.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "CarDekho",
+        "portal": "generic",
+        "url": "https://careers.cardekho.com/jobs?q=Angular&location=India",
+        "final_url": "https://careers.cardekho.com/jobs?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Spinny",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/spinny?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/spinny?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Cars24",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/cars24?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/cars24?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Droom",
+        "portal": "generic",
+        "url": "https://careers.droom.in/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Square Yards",
+        "portal": "generic",
+        "url": "https://careers.squareyards.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "NestAway",
+        "portal": "generic",
+        "url": "https://careers.nestaway.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Magicbricks",
+        "portal": "generic",
+        "url": "https://careers.magicbricks.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1000)"
+    },
+    {
+        "name": "PropTiger",
+        "portal": "generic",
+        "url": "https://careers.proptiger.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "ZoloStay",
+        "portal": "generic",
+        "url": "https://careers.zolostays.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1000)"
+    },
+    {
+        "name": "Stanza Living",
+        "portal": "generic",
+        "url": "https://careers.stanzaliving.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: All connection attempts failed"
+    },
+    {
+        "name": "Livspace",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/livspace?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/livspace?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "HomeLane",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/homelane?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/homelane?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Design Cafe",
+        "portal": "generic",
+        "url": "https://careers.designcafe.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Pepperfry",
+        "portal": "generic",
+        "url": "https://careers.pepperfry.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Furlenco",
+        "portal": "generic",
+        "url": "https://careers.furlenco.com/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Rentomojo",
+        "portal": "generic",
+        "url": "https://careers.rentomojo.com/jobs?q=Angular&location=India",
+        "final_url": "https://careers.rentomojo.com/jobs?q=Angular&location=India",
+        "reason": "HTTP 530"
+    },
+    {
+        "name": "Wakefit",
+        "portal": "greenhouse",
+        "url": "https://boards.greenhouse.io/wakefit?q=Angular&location=India",
+        "final_url": "https://job-boards.greenhouse.io/wakefit?q=Angular&location=India",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "The Sleep Company",
+        "portal": "generic",
+        "url": "https://careers.thesleepcompany.in/jobs?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Capgemini",
+        "portal": "generic",
+        "url": "https://www.capgemini.com/in-en/careers/job-search/?keyword=Engineer",
+        "final_url": "https://www.capgemini.com/in-en/careers/job-search/?keyword=Engineer",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "Tech Mahindra",
+        "portal": "generic",
+        "url": "https://careers.techmahindra.com/job-search/?keyword=Engineer",
+        "final_url": "https://careers.techmahindra.com/job-search/?keyword=Engineer",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "ValueLabs",
+        "portal": "generic",
+        "url": "https://careers.valuelabs.com/",
+        "final_url": "",
+        "reason": "Error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+    },
+    {
+        "name": "Zensar Technologies",
+        "portal": "generic",
+        "url": "https://careers.zensar.com/?search=Angular",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    },
+    {
+        "name": "Anblicks",
+        "portal": "generic",
+        "url": "https://anblicks.com/careers/",
+        "final_url": "https://www.anblicks.com/careers/",
+        "reason": "HTTP 404"
+    },
+    {
+        "name": "eSparkBiz",
+        "portal": "generic",
+        "url": "https://www.esparkbiz.com/careers?q=Angular&location=India",
+        "final_url": "",
+        "reason": "Error: [Errno 11001] getaddrinfo failed"
+    }
+]

@@ -1,0 +1,28 @@
+﻿2026-06-10T19:30:50.1488648Z ##[group]Run actions/upload-artifact@v4
+2026-06-10T19:30:50.1488969Z with:
+2026-06-10T19:30:50.1489201Z   name: daily-job-targets
+2026-06-10T19:30:50.1489454Z   path: output/
+2026-06-10T19:30:50.1489698Z   retention-days: 7
+2026-06-10T19:30:50.1489948Z   if-no-files-found: warn
+2026-06-10T19:30:50.1490209Z   compression-level: 6
+2026-06-10T19:30:50.1490451Z   overwrite: false
+2026-06-10T19:30:50.1490686Z   include-hidden-files: false
+2026-06-10T19:30:50.1490947Z env:
+2026-06-10T19:30:50.1491227Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-10T19:30:50.1491679Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-06-10T19:30:50.1492297Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-10T19:30:50.1492701Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-10T19:30:50.1493120Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-10T19:30:50.1493518Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-06-10T19:30:50.1493922Z ##[endgroup]
+2026-06-10T19:30:50.3779081Z With the provided path, there will be 2 files uploaded
+2026-06-10T19:30:50.3784536Z Artifact name is valid!
+2026-06-10T19:30:50.3785486Z Root directory input is valid!
+2026-06-10T19:30:50.5258904Z Beginning upload of artifact content to blob storage
+2026-06-10T19:30:50.6033323Z Uploaded bytes 2146
+2026-06-10T19:30:50.6250471Z Finished uploading artifact content to blob storage!
+2026-06-10T19:30:50.6253725Z SHA256 digest of uploaded artifact zip is ed857ca767df665470ed7ce4d99aba6b0dfa1fb749f6e089d83595f8f59e9ccc
+2026-06-10T19:30:50.6255583Z Finalizing artifact upload
+2026-06-10T19:30:50.7762224Z Artifact daily-job-targets.zip successfully finalized. Artifact ID 7546054517
+2026-06-10T19:30:50.7763371Z Artifact daily-job-targets has been successfully uploaded! Final size is 2146 bytes. Artifact ID is 7546054517
+2026-06-10T19:30:50.7765375Z Artifact download URL: https://github.com/mathurkartik/angular-job/actions/runs/27299438409/artifacts/7546054517

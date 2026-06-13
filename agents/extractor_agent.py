@@ -36,9 +36,9 @@ class ExtractorAgent(BaseGroqAgent):
         """Extract job listings from raw page text."""
         user_prompt = f"""Base URL: {base_url}
 
-Raw Career Page Text (first 6000 chars):
+Raw Career Page Text (first 16000 chars):
 ---
-{raw_text[:6000]}
+{raw_text[:16000]}
 ---
 
 Extract all Software Engineering and Frontend job listings from this text."""

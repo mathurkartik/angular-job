@@ -1,0 +1,72 @@
+﻿2026-06-10T19:04:32.9159950Z ##[group]Run actions/checkout@v4
+2026-06-10T19:04:32.9160894Z with:
+2026-06-10T19:04:32.9161395Z   repository: mathurkartik/angular-job
+2026-06-10T19:04:32.9166699Z   token: ***
+2026-06-10T19:04:32.9167195Z   ssh-strict: true
+2026-06-10T19:04:32.9167688Z   ssh-user: git
+2026-06-10T19:04:32.9168178Z   persist-credentials: true
+2026-06-10T19:04:32.9168702Z   clean: true
+2026-06-10T19:04:32.9169191Z   sparse-checkout-cone-mode: true
+2026-06-10T19:04:32.9169797Z   fetch-depth: 1
+2026-06-10T19:04:32.9170276Z   fetch-tags: false
+2026-06-10T19:04:32.9170794Z   show-progress: true
+2026-06-10T19:04:32.9171293Z   lfs: false
+2026-06-10T19:04:32.9171750Z   submodules: false
+2026-06-10T19:04:32.9172399Z   set-safe-directory: true
+2026-06-10T19:04:32.9173222Z ##[endgroup]
+2026-06-10T19:04:33.0347377Z Syncing repository: mathurkartik/angular-job
+2026-06-10T19:04:33.0350145Z ##[group]Getting Git version info
+2026-06-10T19:04:33.0351279Z Working directory is '/home/runner/work/angular-job/angular-job'
+2026-06-10T19:04:33.0352794Z [command]/usr/bin/git version
+2026-06-10T19:04:33.0437472Z git version 2.54.0
+2026-06-10T19:04:33.0475898Z ##[endgroup]
+2026-06-10T19:04:33.0494971Z Temporarily overriding HOME='/home/runner/work/_temp/940baf83-53d7-435b-90e0-294f9e719630' before making global git config changes
+2026-06-10T19:04:33.0496891Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-10T19:04:33.0512292Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/angular-job/angular-job
+2026-06-10T19:04:33.0564953Z Deleting the contents of '/home/runner/work/angular-job/angular-job'
+2026-06-10T19:04:33.0569603Z ##[group]Initializing the repository
+2026-06-10T19:04:33.0575696Z [command]/usr/bin/git init /home/runner/work/angular-job/angular-job
+2026-06-10T19:04:33.0655580Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-06-10T19:04:33.0657430Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-06-10T19:04:33.0659774Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-06-10T19:04:33.0661479Z hint: call:
+2026-06-10T19:04:33.0662754Z hint:
+2026-06-10T19:04:33.0663974Z hint: 	git config --global init.defaultBranch <name>
+2026-06-10T19:04:33.0665424Z hint:
+2026-06-10T19:04:33.0666802Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-06-10T19:04:33.0668875Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-06-10T19:04:33.0670431Z hint:
+2026-06-10T19:04:33.0671415Z hint: 	git branch -m <name>
+2026-06-10T19:04:33.0672826Z hint:
+2026-06-10T19:04:33.0674406Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-06-10T19:04:33.0677162Z Initialized empty Git repository in /home/runner/work/angular-job/angular-job/.git/
+2026-06-10T19:04:33.0681647Z [command]/usr/bin/git remote add origin https://github.com/mathurkartik/angular-job
+2026-06-10T19:04:33.0720490Z ##[endgroup]
+2026-06-10T19:04:33.0722469Z ##[group]Disabling automatic garbage collection
+2026-06-10T19:04:33.0724641Z [command]/usr/bin/git config --local gc.auto 0
+2026-06-10T19:04:33.0762091Z ##[endgroup]
+2026-06-10T19:04:33.0763870Z ##[group]Setting up auth
+2026-06-10T19:04:33.0767714Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-10T19:04:33.0804988Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-10T19:04:33.1124531Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-10T19:04:33.1155950Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-10T19:04:33.1396121Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-10T19:04:33.1429401Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-10T19:04:33.1677831Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-06-10T19:04:33.1713854Z ##[endgroup]
+2026-06-10T19:04:33.1715329Z ##[group]Fetching the repository
+2026-06-10T19:04:33.1723810Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2af376abf9d7a1ca7c2d090eba5c4746d8b4e1c0:refs/remotes/origin/main
+2026-06-10T19:04:33.5118568Z From https://github.com/mathurkartik/angular-job
+2026-06-10T19:04:33.5121336Z  * [new ref]         2af376abf9d7a1ca7c2d090eba5c4746d8b4e1c0 -> origin/main
+2026-06-10T19:04:33.5150929Z ##[endgroup]
+2026-06-10T19:04:33.5152597Z ##[group]Determining the checkout info
+2026-06-10T19:04:33.5153929Z ##[endgroup]
+2026-06-10T19:04:33.5160069Z [command]/usr/bin/git sparse-checkout disable
+2026-06-10T19:04:33.5205120Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-06-10T19:04:33.5232728Z ##[group]Checking out the ref
+2026-06-10T19:04:33.5237513Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-06-10T19:04:33.5458251Z Switched to a new branch 'main'
+2026-06-10T19:04:33.5463727Z branch 'main' set up to track 'origin/main'.
+2026-06-10T19:04:33.5470393Z ##[endgroup]
+2026-06-10T19:04:33.5511427Z [command]/usr/bin/git log -1 --format=%H
+2026-06-10T19:04:33.5535698Z 2af376abf9d7a1ca7c2d090eba5c4746d8b4e1c0

@@ -4,13 +4,18 @@ Geographic whitelists per category. Category 3 has no geo filter.
 
 # Category 1: Strict — only target cities + remote
 CATEGORY1_GEO_WHITELIST = [
+    # Primary target cities
     "bengaluru", "bangalore", "bengaluru/hyderabad",
     "hyderabad", "secunderabad",
+    # BFSI GCC hubs (Deutsche Bank Pune, Citi Chennai, UBS Pune, HSBC Pune, Barclays Pune)
+    "pune", "chennai", "gurgaon", "gurugram", "noida",
+    "mumbai",
+    # Remote variants
     "remote", "work from home", "wfh", "global remote", "anywhere",
-    "not specified", "unknown"
+    "india",
+    # Fallbacks
+    "not specified", "unknown",
 ]
-# NOTE: "india" is deliberately excluded — it would false-positive
-# on Gurgaon, Pune, Chennai, Noida, etc.
 
 # Category 2: Relaxed — any Indian city accepted
 CATEGORY2_GEO_WHITELIST = [

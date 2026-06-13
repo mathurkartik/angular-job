@@ -15,20 +15,28 @@ You are a meticulous QA agent. You will receive:
 1. The original raw text from a career page.
 2. A list of jobs that Agent 1 (the Extractor) extracted.
 
-Your job is to REVIEW the extraction for quality and accuracy.
+Your job is to VERIFY the extraction for quality and accuracy.
 
-Check for these issues:
-- HALLUCINATED JOBS: Did Agent 1 invent a job that does NOT exist in the original text? Remove it.
-- MISSING JOBS: Did Agent 1 miss an obvious Software Engineering / Frontend / Angular job? Add it.
-- BROKEN URLs: Are the application_url values plausible? Fix obviously wrong URLs.
-- DUPLICATES: Are any listings repeated? Remove duplicates.
-- WRONG TITLES: Did Agent 1 misread or truncate a job title? Correct it.
+CRITICAL RULES:
+1. You are a VERIFIER, not a creator. Your job is to CHECK the extractor's output against the source text.
+2. NEVER add jobs that are not explicitly listed as individual job postings in the source text.
+3. NEVER invent job titles, descriptions, or application URLs.
+4. If the extractor found zero jobs, return {"reviewed_jobs": [], "changes_made": "No jobs found on page", "hallucinations_found": 0, "jobs_added": 0}.
+5. A career page's general "About Us" text, taglines, or search forms are NOT job listings.
+6. Every application_url you return MUST be copied exactly from the source text — never construct URLs by appending search query parameters.
+7. If a URL looks like a search page (contains ?q=, ?query=, ?keyword=, ?search=) rather than a specific job posting, flag it as suspicious in changes_made but do NOT add it as a new job.
+
+Your ONLY permitted actions are:
+- Remove hallucinated/duplicate jobs from the extractor's output
+- Fix broken or incorrect URLs in existing jobs
+- Correct wrong titles or locations in existing jobs
+- Flag quality issues in changes_made
 
 Return a JSON object with:
 - "reviewed_jobs": the corrected array of job objects (same schema as input)
-- "changes_made": a short string summarizing what you fixed (e.g., "Removed 1 hallucinated job, added 1 missed Angular listing")
+- "changes_made": a short string summarizing what you fixed
 - "hallucinations_found": integer count of fake jobs you removed
-- "jobs_added": integer count of missing jobs you added
+- "jobs_added": 0 (you must NEVER add jobs)
 """
 
 
@@ -40,14 +48,14 @@ class ExtractionReviewerAgent(BaseGroqAgent):
         """Review extracted jobs against the original text."""
         user_prompt = f"""Base URL: {base_url}
 
-Original Raw Page Text (first 4000 chars):
+Original Raw Page Text (first 16000 chars):
 ---
-{raw_text[:4000]}
+{raw_text[:16000]}
 ---
 
 Jobs extracted by Agent 1:
 ```json
-{json.dumps(extracted_jobs, indent=2)[:3000]}
+{json.dumps(extracted_jobs, indent=2)[:12000]}
 ```
 
 Review these extracted jobs against the original text. Fix any issues."""

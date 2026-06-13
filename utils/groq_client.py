@@ -3,8 +3,10 @@ import json
 from typing import List, Dict, Any, Optional
 from groq import Groq
 from utils.logger import get_logger
+from utils.groq_rate_limiter import GroqRateLimiter
 
 logger = get_logger("groq_client")
+rate_limiter = GroqRateLimiter()
 
 class GroqClient:
     def __init__(self):
@@ -19,7 +21,7 @@ class GroqClient:
             logger.warning("No GROQ_API_KEY found in environment. Groq integrations will fail.")
         
         # We use a fast, cheap model for high-volume text parsing
-        self.model = "llama-3.1-8b-instant" 
+        self.model = "llama-3.3-70b-versatile" 
         self.current_key_idx = 0
         self.client = Groq(api_key=self.api_keys[self.current_key_idx]) if self.api_keys else None
 
@@ -45,13 +47,16 @@ Each object in the array must have exactly these keys:
 - "description_text": A short snippet or description of the role if available.
 
 Raw Page Text:
-{text[:6000]}  # Truncating to avoid context limits if text is absolutely massive
+{text[:16000]}  # Truncating to avoid context limits if text is absolutely massive
 """
         attempts = 0
         max_attempts = len(self.api_keys) if self.api_keys else 1
         
         while attempts < max_attempts:
             try:
+                # Pace calls using the rate limiter (estimate 6000 tokens for massive raw text)
+                rate_limiter.wait_if_needed(6000)
+                
                 chat_completion = self.client.chat.completions.create(
                     messages=[
                         {
@@ -62,6 +67,10 @@ Raw Page Text:
                     model=self.model,
                     response_format={"type": "json_object"},
                 )
+                
+                # Update actual tokens
+                if chat_completion.usage:
+                    rate_limiter.update_actual_usage(6000, chat_completion.usage.total_tokens)
                 
                 response_content = chat_completion.choices[0].message.content
                 return json.loads(response_content)

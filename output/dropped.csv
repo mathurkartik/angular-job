@@ -1,0 +1,17 @@
+Company,Job Title,Failed Gate,Reason
+PhonePe,Engineering Manager - Bangalore,TITLE,No tech keyword or excluded keyword matched
+PhonePe,Engineering Manager - Pune,TITLE,No tech keyword or excluded keyword matched
+PhonePe,Software Engineer - iOS,CONTENT_ANGULAR,'angular' not found in 4389-char JD
+PhonePe,"Software Engineer, Android",CONTENT_ANGULAR,'angular' not found in 4389-char JD
+PhonePe,Staff Engineer,CONTENT_ANGULAR,'angular' not found in 4389-char JD
+PhonePe,Engineering Manager - Platform Team,TITLE,No tech keyword or excluded keyword matched
+PhonePe,Site Reliability Engineer,CONTENT_ANGULAR,'angular' not found in 4389-char JD
+PhonePe,Site Reliability Engineer - Big Data (7 to 11 years),CONTENT_ANGULAR,'angular' not found in 4389-char JD
+PhonePe,Site Reliability Engineer - Azure (4-8yrs),CONTENT_ANGULAR,'angular' not found in 4389-char JD
+PhonePe,Site Reliability Engineer 2,CONTENT_ANGULAR,'angular' not found in 4389-char JD
+PhonePe,Site Reliability Engineer 3 - (on-prem),CONTENT_ANGULAR,'angular' not found in 4389-char JD
+PhonePe,"Service Delivery Engineer, SRE",TITLE,No tech keyword or excluded keyword matched
+PhonePe,Ops Engineer 2 to 5 Years,CONTENT_ANGULAR,'angular' not found in 4389-char JD
+PhonePe,Network Delivery Engineer 1 (Pune),CONTENT_ANGULAR,'angular' not found in 4389-char JD
+PhonePe,Senior Infosec Engineer,CONTENT_ANGULAR,'angular' not found in 4389-char JD
+MoEngage,Engineering Manager - Data Platform,TITLE,No tech keyword or excluded keyword matched

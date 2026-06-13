@@ -10,7 +10,7 @@ from config.companies_main import COMPANIES as MAIN_COMPANIES
 from config.companies_indian_product import COMPANIES as PRODUCT_COMPANIES
 from config.companies_service import COMPANIES as SERVICE_COMPANIES
 
-from scrapers.scraper_factory import get_scraper
+from scrapers.scraper_factory import get_scraper, is_api_scraper
 from agents.pipeline import AgentPipeline
 from exporters.csv_exporter import CSVExporter
 from exporters.json_exporter import JSONExporter
@@ -19,8 +19,26 @@ from utils.logger import get_logger
 
 logger = get_logger("main")
 
-# Initialize the 5-agent pipeline once
+# Initialize the 2-agent pipeline once
 pipeline = AgentPipeline()
+
+
+def deduplicate_jobs(jobs: list) -> list:
+    """Remove duplicate jobs based on (company_name, job_title, location)."""
+    seen = set()
+    unique = []
+    for job in jobs:
+        key = (
+            job.company_name.lower().strip(),
+            job.job_title.lower().strip(),
+            job.location.lower().strip(),
+        )
+        if key not in seen:
+            seen.add(key)
+            unique.append(job)
+        else:
+            logger.info(f"Deduplicated: {job.job_title} at {job.company_name}")
+    return unique
 
 
 async def process_category(companies: List[dict], category: CompanyCategory, headless: bool) -> List[ExportedJobListing]:
@@ -32,11 +50,32 @@ async def process_category(companies: List[dict], category: CompanyCategory, hea
             scraper = get_scraper(company["portal_type"], headless=headless)
             portal = company["portal_type"]
 
-            if portal in ("greenhouse", "lever", "workday"):
-                # Specialized scrapers have their own extract_jobs() — use them directly
+            if is_api_scraper(portal):
+                # Specialized scrapers have their own scrape() method — use them directly
                 logger.info(f"Using specialized {portal} scraper for {company['name']}")
                 raw_jobs = await scraper.scrape(company, category)
+            else:
+                raw_jobs = None
 
+            if raw_jobs is None:
+                # Fallback to GenericScraper browser + 2-agent pipeline
+                logger.info(f"Using 2-agent pipeline for {company['name']}")
+                
+                if is_api_scraper(portal):
+                    from scrapers.generic_scraper import GenericScraper
+                    active_scraper = GenericScraper(headless=headless)
+                else:
+                    active_scraper = scraper
+
+                raw_text = await active_scraper.get_page_text(company)
+
+                if not raw_text:
+                    logger.warning(f"No text extracted from {company['name']}. Skipping.")
+                    continue
+
+                jobs = await pipeline.process_page(raw_text, company, category)
+                exported_jobs.extend(jobs)
+            else:
                 # Run each raw job through the filter
                 for raw_job in raw_jobs:
                     from filters.pipeline_router import run_pipeline
@@ -46,17 +85,6 @@ async def process_category(companies: List[dict], category: CompanyCategory, hea
                             **filtered.model_dump()
                         )
                         exported_jobs.append(exported)
-            else:
-                # Generic portals — use the 2-agent pipeline
-                logger.info(f"Using 2-agent pipeline for {company['name']}")
-                raw_text = await scraper.get_page_text(company)
-
-                if not raw_text:
-                    logger.warning(f"No text extracted from {company['name']}. Skipping.")
-                    continue
-
-                jobs = await pipeline.process_page(raw_text, company, category)
-                exported_jobs.extend(jobs)
 
         except Exception as e:
             logger.error(f"Error processing {company['name']}: {str(e)}")
@@ -94,8 +122,9 @@ async def main():
         all_exported_jobs.extend(jobs)
 
 
-    # ── Rank and Export ──
-    logger.info("\nRanking and Exporting Results...")
+    # ── Deduplicate, Rank and Export ──
+    logger.info("\nDeduplicating, Ranking and Exporting Results...")
+    all_exported_jobs = deduplicate_jobs(all_exported_jobs)
     # Sort by category priority
     cat_order = {"main": 1, "indian_product": 2, "service": 3}
     all_exported_jobs.sort(key=lambda j: cat_order.get(j.category.value, 99))

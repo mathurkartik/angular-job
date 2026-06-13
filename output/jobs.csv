@@ -1,5 +1,5 @@
-Rank,Category,Tier,Company,Job Title,Location,Total Score,Justification,Application URL
-1,main,Tier_2_Big_Tech,Ericsson,Automation Architect,"Bangalore,Karnataka,India",0.53,The role requires modern Angular skills but lacks emphasis on testing and enterprise scalability.,https://jobs.ericsson.com/careers/job/783947/automation-architect-Bangalore-Karnataka-India/783947BR
-2,service,Tier_8_Background_Service,Wipro,Angular Developer,Not specified,0.55,"The role primarily focuses on Angular, but lacks details on modern Angular features, state management, testing, and enterprise scalability.",https://careers.wipro.com/careers-home/jobs/Angular-Developer-12351
-3,service,Tier_8_Background_Service,Photon,Angular Developer,Not specified,0.45,"The job description does not provide enough information about the required skills and technologies, but mentions Angular as a job title, which is a positive sign.",https://www.photon.com/careers?search=Angular
-4,service,Tier_8_Background_Service,Tata Elxsi,Angular Developer,Bangalore/Chennai,0.35,"The job description mentions Angular as a requirement but lacks details on modern Angular features, state management, testing, and enterprise scalability.",https://www.tataelxsi.com/careers/job-openings?search=Angular
+Rank,Category,Tier,Company,Job Title,Location,Application URL
+1,indian_product,Tier_7_Domestic_Unicorn,MoEngage,Lead Software Engineer - Data,"Bengaluru, Karnataka, India",https://moengage.hire.trakstar.com/job-description/?id=A1D2F4
+2,indian_product,Tier_7_Domestic_Unicorn,MoEngage,Senior Software Engineer,"Bengaluru, Karnataka, India",https://moengage.hire.trakstar.com/job-description/?id=A1D2F5
+3,indian_product,Tier_7_Domestic_Unicorn,MoEngage,Senior Software Engineer - Data Engineering,"Bengaluru, Karnataka, India",https://moengage.hire.trakstar.com/job-description/?id=A1D2F6
+4,indian_product,Tier_7_Domestic_Unicorn,MoEngage,Senior Software Engineer- Data Platform,"Bengaluru, Karnataka, India",https://moengage.hire.trakstar.com/job-description/?id=A1D2F7

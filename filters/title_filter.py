@@ -15,12 +15,19 @@ class TitleFilter:
     
     # Aggressively drop roles that are Tech but NOT Frontend/Angular
     EXCLUDE_KEYWORDS = [
-        "qa", "sdet", "test", "testing", "backend", "back end", "back-end", 
-        "data", "machine learning", "ml", "ai", "artificial intelligence", 
-        "devops", "sre", "cloud", "security", "network", "system", "systems", 
-        "database", "infrastructure", "hardware", "firmware", "sales", "hr", 
-        "finance", "support", "it", "administrator", "collection", "collections", 
-        "lending", "credit"
+        "qa", "sdet", "test automation", "testing",
+        "backend", "back end", "back-end",
+        "machine learning",
+        "devops", "sre",
+        "security analyst", "security engineer",
+        "network engineer", "network administrator",
+        "database administrator", "dba",
+        "hardware", "firmware",
+        "sales", "hr", "human resources",
+        "finance", "accounting",
+        "administrator",
+        "collection", "collections",
+        "lending", "credit",
     ]
     
     @staticmethod

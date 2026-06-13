@@ -19,6 +19,7 @@ class RawJobListing(BaseModel):
     application_url: HttpUrl
     date_posted: Optional[str] = None
     scraped_at: datetime = Field(default_factory=datetime.now)
+    source: str = "ats_api"               # "ats_api" | "llm_fallback"
 
 class ReviewedJobListing(RawJobListing):
     """A listing that has been reviewed by the Extraction Reviewer (Agent 2)."""

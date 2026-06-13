@@ -1,0 +1,20 @@
+﻿2026-06-10T19:30:50.7890845Z ##[group]Run cp output/jobs.json frontend/public/jobs.json
+2026-06-10T19:30:50.7891350Z [36;1mcp output/jobs.json frontend/public/jobs.json[0m
+2026-06-10T19:30:50.7891748Z [36;1mgit config user.name "github-actions[bot]"[0m
+2026-06-10T19:30:50.7892658Z [36;1mgit config user.email "github-actions[bot]@users.noreply.github.com"[0m
+2026-06-10T19:30:50.7893221Z [36;1mgit add frontend/public/jobs.json[0m
+2026-06-10T19:30:50.7893674Z [36;1mgit diff --cached --quiet || git commit -m "chore: update jobs.json [skip ci]"[0m
+2026-06-10T19:30:50.7894133Z [36;1mgit push[0m
+2026-06-10T19:30:50.7929861Z shell: /usr/bin/bash -e {0}
+2026-06-10T19:30:50.7930151Z env:
+2026-06-10T19:30:50.7930450Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-10T19:30:50.7930944Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-06-10T19:30:50.7931390Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-10T19:30:50.7931793Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-10T19:30:50.7932443Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-10T19:30:50.7932846Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-06-10T19:30:50.7933196Z ##[endgroup]
+2026-06-10T19:30:50.8333657Z [main 915d3b8] chore: update jobs.json [skip ci]
+2026-06-10T19:30:50.8334424Z  1 file changed, 344 insertions(+), 1 deletion(-)
+2026-06-10T19:30:52.0974022Z To https://github.com/mathurkartik/angular-job
+2026-06-10T19:30:52.0974535Z    2af376a..915d3b8  main -> main
